@@ -1,0 +1,85 @@
+doctype html
+html(lang='en')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0')
+    title Starter Template - Materialize
+    // CSS
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    link(href='/css/materialize.min.css', type='text/css', rel='stylesheet', media='screen,projection')
+    block headCSS
+    link(href='/css/style.css', type='text/css', rel='stylesheet', media='screen,projection')
+
+
+  body.grey.lighten-5
+    nav.white(role='navigation')
+      .nav-wrapper
+        a#logo-container.brand-logo(href='#') 
+          img(src='/imgs/logod.png', height='50px', style='margin-top: 7px; margin-left:20px')
+        ul.right
+          li.hide-on-med-and-down
+            .row
+              .input-field.col.s6.s12.grey-text.grey-darken-4
+                i.grey-text.text-darken-4.material-icons.prefix search
+                input#autocomplete-input.autocomplete.grey-text.grey-darken-4(type='text', placeholder='search')
+          li
+            a(href='#') 
+              i.material-icons.grey-text.text-darken-4 account_circle
+          li
+            a(href='#') 
+              i.material-icons.grey-text.text-darken-4 cloud_upload
+          li.hide-on-med-and-up.show-on-medium
+            a(href='#') 
+              i.material-icons.grey-text.text-darken-4 input
+          li.hide-on-med-and-down
+            a(href='#') 
+              <a class="waves-effect waves-light btn red"><i class="material-icons right">input</i>Login</a>
+        ul#nav-mobile.sidenav
+          li
+            a(href='#') Navbar Link
+        a.sidenav-trigger(href='#', data-target='nav-mobile')
+          i.grey-text.text-darken-4.material-icons menu
+    
+    .container
+      block content
+      br
+    footer.page-footer.blue
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text About DP Classic
+            p.grey-text.text-lighten-5(style="font-weight: 300")
+              | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime velit minus possimus quaerat dignissimos sed eum voluptate sint sapiente autem. Facilis aliquid optio accusamus minus nam magni incidunt quaerat eveniet?
+          .col.l3.s12
+            h5.white-text Quick Links
+            ul
+              li
+                a.white-text(href='#!') How it all works?
+              li
+                a.white-text(href='#!') FAQ
+              li
+                a.white-text(href='#!') Guides
+              li
+                a.white-text(href='#!') Terms & Conditions
+          .col.l3.s12
+            h5.white-text Connect
+            ul
+              li
+                a.white-text(href='#!') steemd.com
+              li
+                a.white-text(href='#!') steemit.com
+              li
+                a.white-text(href='#!') bitshares.org
+              li
+                a.white-text(href='#!') bitcoin.com
+      .footer-copyright
+        .container
+          | Made by 
+          a.orange-text.text-lighten-3(href='http://materializecss.com') Materialize
+    // Scripts
+    script(src='/js/jquery.min.js')
+    script(src='/js/materialize.js')
+    script(src='/js/init.js')
+    block footJS
+    

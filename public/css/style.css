@@ -1,0 +1,120 @@
+/* Custom Stylesheet */
+
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+* {
+    font-family: 'roboto';
+}
+
+.icon-block {
+    padding: 0 15px;
+}
+
+.icon-block .material-icons {
+    font-size: inherit;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+.margin-hori-5 {
+    margin: 8px 15px !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.margin-vertical-15 {
+    margin: 15px 0 !important;
+}
+
+.margin-top-15 {
+    margin: 15px 0 0 0 0 !important;
+}
+
+.mt-5 {
+    margin-top: 5px !important;
+}
+
+.pt-20 {
+    padding-top: 20px !important;
+}
+
+.pt-5 {
+    padding-top: 5px !important;
+}
+
+.owl-carousel {
+    position: relative;
+}
+
+.owl-prev,
+.owl-next {
+    position: absolute;
+    top: 43%;
+    margin-top: -10px;
+}
+
+.owl-prev {
+    left: -45px;
+}
+
+.owl-next {
+    right: -45px;
+}
+
+nav ul a.btn-flat {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+nav ul a {
+    padding: 0 8px;
+}
+
+.btn-trans {
+    opacity: 0.7;
+}
+
+.card-image .badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.card .card-content {
+    padding: 16px;
+    min-height: 92px;
+    max-height: 92px;
+    height: 92px;
+    overflow: hidden;
+}
+
+.card .card-action {
+    padding: 12px;
+}
+
+.card .card-action .badge {
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+a.small {
+    font-size: 80%;
+}
+
+.small {
+    font-size: 80%;
+}
+
+hr.hr-style {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(173, 173, 173, 0), rgba(173, 173, 173, 0.75), rgba(173, 173, 173, 0));
+}
