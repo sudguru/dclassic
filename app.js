@@ -5,9 +5,9 @@ const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
 const flash = require('connect-flash');
 const session = require('express-session');
-const passport = require('passport');
 const config = require('./config/database');
 var sc2 = require('sc2-sdk');
+let access_token = null;
 
 var api = sc2.Initialize({
   app: 'steemporn.app',
@@ -32,7 +32,6 @@ db.on('error', function(err){
 
 // Init App
 const app = express();
-
 
 // Load View Engine
 app.set('views', path.join(__dirname, 'views'));
@@ -79,16 +78,6 @@ app.use(expressValidator({
   }
 }));
 
-// Passport Config
-require('./config/passport')(passport);
-// Passport Middleware
-app.use(passport.initialize());
-app.use(passport.session());
-
-app.get('*', function(req, res, next){
-  res.locals.user = req.user || null;
-  next();
-});
 
 // Home Route
 app.get('/', function(req, res){
@@ -97,17 +86,38 @@ app.get('/', function(req, res){
       res.render('index1', { link });
 });
 
-app.get('/complete', function(req, res){
+app.get('/connect', function(req, res){
+
+  var access_token = req.query.access_token;
+  var expires_in = req.query.expires_in;
+  var state = req.query.state;
+  var username = req.query.username
+  api.setAccessToken(access_token)
+  console.log(username);
+  console.log(access_token);
+  api.me(function (err, res) {
+    console.log(err, res);
+  });
   res.render('complete');
 });
 
+app.get('/test', function(req, res){
+  api.me(function (err, res) {
+    console.log(err, 'ereer', res);
+  });
+  res.render('index1');
+});
+
+//http://localhost:8080/connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCJdLCJpYXQiOjE1MjU0NDE4ODAsImV4cCI6MTUyNjA0NjY4MH0.n-ze7mg0cTR7uNEB5u0PFPnBNSdlMKgMD-NRJRKfF1Y&expires_in=604800&state=state&username=sudguru
+
 // Route Files
 let video = require('./routes/video');
-let auth = require('./routes/auth');
-//app.use('/video', video);
-app.use('/auth', auth);
+app.use('/video', video);
 
-// Start Server
-app.listen(8080, function(){
-  console.log('Server started on port 3000...');
-});
+
+// // Start Server
+// app.listen(8080, function(){
+//   console.log('Server started on port 3000...');
+// });
+
+module.exports = app;
