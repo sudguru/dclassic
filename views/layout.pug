@@ -6,7 +6,7 @@ html(lang='en')
     title Starter Template - Materialize
     // CSS
     link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400",rel="stylesheet")
     link(href='/css/materialize.min.css', type='text/css', rel='stylesheet', media='screen,projection')
     block headCSS
     link(href='/css/style.css', type='text/css', rel='stylesheet', media='screen,projection')
@@ -15,8 +15,8 @@ html(lang='en')
   body.grey.lighten-4
     nav.white(role='navigation')
       .nav-wrapper
-        a#logo-container.brand-logo(href='#') 
-          img(src='/imgs/logodd.png', style='margin-top: 7px; margin-left:15px')
+        a#logo-container.brand-logo.left(href='#') 
+          img(src='/imgs/logodd.png')
         ul.right
           li.hide-on-med-and-down
             .row
@@ -35,16 +35,36 @@ html(lang='en')
           li.hide-on-med-and-down
             a(href='#') 
               <a class="waves-effect waves-light btn red"><i class="material-icons right">input</i>Login</a>
-        ul#nav-mobile.sidenav
-          li
-            a(href='#') Navbar Link
-        a.sidenav-trigger(href='#', data-target='nav-mobile')
+        a.sidenav-trigger.show-on-large(href='#', data-target='slide-out')
           i.grey-text.text-darken-4.material-icons menu
+    ul#slide-out.sidenav
+      li
+        .user-view
+          .background
+            img(src='images/office.jpg')
+          a(href='#user')
+            img.circle(src='images/yuna.jpg')
+          a(href='#name')
+            span.white-text.name John Doe
+          a(href='#email')
+            span.white-text.email jdandturk@gmail.com
+      li
+        a(href='#!')
+          i.material-icons cloud
+          | First Link With Icon
+      li
+        a(href='#!') Second Link
+      li
+        .divider
+      li
+        a.subheader Subheader
+      li
+        a.waves-effect(href='#!') Third Link With Waves
     
     .container
       block content
       br
-    footer.page-footer.blue
+    footer.page-footer.grey
       .container
         .row
           .col.l6.s12
