@@ -13,7 +13,8 @@ let Video = require('./models/video');
 
 var api = sc2.Initialize({
   app: 'steemporn.app',
-  callbackURL: 'http://54.38.207.246:8080/connect',
+  callbackURL: 'http://localhost:8080/connect',
+  //callbackURL: 'http://54.38.207.246:8080/connect',
   scope: ['vote', 'comment']
 });
 
@@ -180,8 +181,9 @@ app.post('/upload', ensureAuthenticated, (req, res) => {
 
 app.post('/upload/save', (req, res) => {
   //console.log(req.body)
-  const SERVER = 'http://54.38.207.246:8080';
-
+  //const SERVER = 'http://54.38.207.246:8080';
+  const SERVER = 'http://localhost:8080';
+  
   let videoPost = new Video();
     videoPost.title = req.body.title,
     videoPost.content = req.body.content,
@@ -241,9 +243,9 @@ app.post('/upload/save', (req, res) => {
 // Access Control
 function ensureAuthenticated(req, res, next){
   const allowed = ['sudguru', 'pranishg'];
-  
-  if(res.session.username){
-    if(allowed.indexOf(res.session.username)>=0)
+  //console.log(req.session.username);
+  if(req.session.username){
+    if(allowed.indexOf(req.session.username)>=0)
     {
       return next();
     } else {
