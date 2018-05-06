@@ -221,7 +221,7 @@ app.post('/upload/save', (req, res) => {
     <img src="${SERVER}/uploads/${videoPost.thumbnail_path}" style="margin: 0 auto" /></a></p>${videoPost.content}`;
 
 
-    api.comment('', 'dpornclassic', videoPost.author, videoPost.permlink, videoPost.title, content, jsonMetadata, function (err, res) {
+    api.comment('', 'dpornclassic', videoPost.author, videoPost.permlink, videoPost.title, content, jsonMetadata, function (err, result) {
       if(err) {
         res.status(500).json({ error: 'steem error'});
       }
