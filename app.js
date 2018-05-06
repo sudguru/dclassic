@@ -242,8 +242,14 @@ app.post('/upload/save', (req, res) => {
 function ensureAuthenticated(req, res, next){
   const allowed = ['sudguru', 'pranishg'];
   
-  if(res.session.username && allowed.indexOf(res.session.username)>=0){
-    return next();
+  if(res.session.username){
+    if(allowed.indexOf(res.session.username)>=0)
+    {
+      return next();
+    } else {
+      req.flash('danger', 'Sorry You are not allowed to upload');
+      res.redirect('/');
+    }
   } else {
     req.flash('danger', 'Please login');
     res.redirect('/login?state=upload');
