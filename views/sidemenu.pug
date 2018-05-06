@@ -1,0 +1,73 @@
+ul#slide-out.sidenav
+  li
+    .user-view
+      .background
+        img(src='/imgs/darkbg.png')
+      if !session.username
+        a(href='#')
+          img.circle(src='/imgs/profile.png')
+        a.white-text(href='/login?state=index')
+          | Login
+      else 
+        a(href='/profile/'+session.username)
+          img.circle(src='https://img.busy.org/@'+session.username)
+        a(href='/profile/'+username)
+          span.white-text.name= session.username
+          br
+  li
+    a.waves-effect.sidenav-close(href='/')
+      i.material-icons home
+      | Home Page
+  li
+    a.waves-effect.sidenav-close(href='/upload')
+      i.material-icons cloud_upload
+      | Upload
+  li
+    a.waves-effect.sidenav-close(href='/hot')
+      i.material-icons brightness_high
+      | Hot Videos
+  li
+    a.waves-effect.sidenav-close(href='/trending')
+      i.material-icons trending_up
+      | Trending Videos
+  li
+    a.waves-effect.sidenav-close(href='/new')
+      i.material-icons redeem
+      | New Videos
+  li
+    a.waves-effect.sidenav-close(href='/subscriptions')
+      i.material-icons subscriptions
+      | Subscriptions
+  li
+    .divider
+  li
+    a.subheader Library
+  li
+    a.waves-effect.sidenav-close(href='#!') 
+      i.material-icons history
+      | History
+    a.waves-effect.sidenav-close(href='#!') 
+      i.material-icons watch_later
+      | Watch Later
+    a.waves-effect.sidenav-close(href='#!') 
+      i.material-icons thumb_up
+      | Liked Videos
+  li
+    .divider
+  li
+    a.text-grey.text-darken-4(href='/about') 
+      i.material-icons info
+      | About
+  li
+    a.text-grey.text-darken-4(href='/privacy')
+      i.material-icons network_locked
+      | Privacy
+
+  li
+    .divider
+  li.center-align
+    | &copy; 2018, DPornClassic
+  li
+    | &nbsp;
+
+

@@ -1,0 +1,80 @@
+extends layout
+block headCSS
+  
+block content
+  
+  section.no-pad
+    .row.no-margin
+      .col.s12
+        h4.margin-top-15 Upload
+    .row.no-margin
+      .col.s12.upload-page
+        form(action='#', enctype='multipart/form-data')
+          .card.blue-grey.darken-1
+            .card-content.white-text
+              .file-field
+                #btn-choose.waves-effect.waves-light.btn-small.blue.mr-5
+                  span Choose File to Upload 
+                  input(type='file', name='myFile', id='myFile')
+              div(style='clear: both; margin-bottom: 10px')
+              .row
+                .col.s12.m12.l6.xl6
+                  <video controls autoplay width="100%"></video>
+                .col.s12.m12.l6.xl6#canvasContainer
+                  <canvas id="c1" width="100%"></canvas>
+              .row(style='margin-bottom: 0')
+                .col.s12
+                  .progress.grey
+                    .determinate.red(style='width: 0%')
+            .card-action
+              .row(style='margin-bottom: 0')
+                .col.s4.m6.l3
+                  a#btn-captureplay.waves-effect.waves-light.btn.green.mr-5.disabled(href='#') Capture 
+                .col.s4.m6.l3
+                  a#btn-snap.waves-effect.waves-light.btn.brown.mr-5.disabled(href='#') &nbsp;&nbsp;Snap&nbsp;&nbsp; 
+                .col.s12.m12.l6.xl6
+                  a#btn-upload.waves-effect.waves-light.btn.red.disabled.mt-20-small(href='#') Start Uploading 
+    .row.upload-page
+      .col.s12.m12
+        .card.white
+          .card-content(style="overflow: visible")
+            form(action='#',  enctype='multipart/form-data')
+              .row
+                .col.s12.m9
+                  .row
+                    .col.s12.m12              
+                      .input-field
+                        input#title.validate(type='text', name='title')
+                        label(for='title') Title
+                        span.helper-text(data-error='This Field is required.', data-success='Ok') Required
+                  .row
+                    .col.s12.m12              
+                      .input-field
+                        textarea#content.materialize-textarea(name='content', rows='10')
+                        label(for='content') Content
+                  .row
+                    .col.s12.m12
+                      .input-field
+                        select(multiple, name='tags', size='5', style='z-index: 5000')
+                          each category in categoryList
+                            option(value=category)= category
+                        label Choose Categories
+                .col.s12.m3
+                  .row
+                    .col.s12.m12
+                      | 100% Power Up
+                      br
+                      .switch
+                        label
+                          | Off
+                          input(type='checkbox', id='power_up')
+                          span.lever
+                          |       On
+                  .row
+                    .col.s12.m12
+                      br
+                      a#save-data.btn.waves-effect.waves-light.blue(href='#') Save Video / Post
+
+block footJS
+  script(src='/js/upload.jquery.js')
+  
