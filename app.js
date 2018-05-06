@@ -13,7 +13,7 @@ let Video = require('./models/video');
 
 var api = sc2.Initialize({
   app: 'steemporn.app',
-  // callbackURL: 'http://localhost:8080/connect',
+  // callbackURL: 'http://localhost:8080/connect' ,
   callbackURL: 'http://54.38.207.246:8080/connect',
   scope: ['vote', 'comment']
 });
