@@ -1,6 +1,6 @@
 (function($){
   $(function(){
-    $('#btn-choose').on('change', function() {
+    $('#btn-choose').on('change', function(event) {
       $(".determinate").css("width", 0);
       const v = document.querySelector('video');
       const file = event.target.files[0];
