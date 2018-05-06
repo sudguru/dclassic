@@ -241,9 +241,8 @@ app.post('/upload/save', (req, res) => {
 // Access Control
 function ensureAuthenticated(req, res, next){
   const allowed = ['sudguru', 'pranishg'];
-  const currentUser = res.session.username;
-
-  if(currentUser && allowed.indexOf(currentUser)>=0){
+  
+  if(res.session.username && allowed.indexOf(res.session.username)>=0){
     return next();
   } else {
     req.flash('danger', 'Please login');
