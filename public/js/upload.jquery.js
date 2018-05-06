@@ -1,5 +1,7 @@
 (function($){
   $(function(){
+    localStorage.removeItem('myFile');
+    localStorage.removeItem('myThumb');
     $('#btn-choose').on('change', function(event) {
       $(".determinate").css("width", 0);
       const v = document.querySelector('video');
@@ -85,6 +87,7 @@
 
     $('#btn-snap').on('click', function() {
       const v = document.querySelector('video');
+      $(this).addClass('disabled');
       $('#btn-upload').removeClass('disabled');
       $(".determinate").css("width", 0);
       // if (v.paused) {
@@ -146,6 +149,8 @@
       };
       xhr.onload = function() {
         localStorage.setItem('myFile', this.responseText);
+        $('.determinate').removeClass('red');
+        $('.determinate').addClass('green');
       };
 
       xhr.send(formData);
@@ -194,16 +199,30 @@
     }
 
     $('#save-data').on('click', function() {
+      var title = document.getElementById('title').value;
+      var thumbnail_path = localStorage.getItem('myThumb');
+      var video_path = localStorage.getItem('myFile');
+      if(title =="")
+      {
+        alert("Please Enter Title");
+        return;
+      } else if(typeof thumbnail_path == undefined || thumbnail_path =="") {
+        alert("Snap not uploaded yet");
+        return;
+      } else if (typeof video_path == undefined || video_path == "") {
+        alert ("Video not uploaded yet");
+        return;
+      }
+
       var elem = document.querySelector('select');
       var sel = M.FormSelect.getInstance(elem);
       const v = document.querySelector('video');
       var formData = new FormData();
-      var title = document.getElementById('title').value;
+      
       var content = document.getElementById('content').value;;
       const temp = new Date().toISOString().replace(/[^a-zA-Z0-9]+/g, '').toLowerCase();
       var permlink = createSlug(title) + '-' + temp;
-      var thumbnail_path = localStorage.getItem('myThumb');
-      var video_path = localStorage.getItem('myFile');
+
       var video_width = v.videoWidth;
       var video_duration = v.duration;
       var tags = sel.getSelectedValues();
@@ -223,7 +242,7 @@
           success: (res) => {
               console.log(res);
               //var batch_id = res.batch_id
-              //window.location.href='/payments/history/'+batch_id;
+              window.location.href='/';
           },
           error: (err) => {
               console.log(err);
