@@ -11,18 +11,61 @@ block content
         a.waves-effect.wave-pink.btn-flat.blue-text.text-darken-2.pt-5 More Hot Videos
     
     .owl-carousel
+      each video in hot
+        .card.hoverable
+          .card-image
+            img(src='/uploads/'+video.thumbnail)
+            span.new.badge.grey.darken-3(data-badge-caption="")= video.duration
+          .card-content= video.title
+            br
+            a.small.grey-text.darken-1(href='#')= video.author
+          .card-action
+            .badge.grey.lighten-2.left= video.payment
+            .badge.right.small= video.posted
+            div(style='clear: both')
+  hr.hr-style
+
+  section.no-pad
+    .row.no-margin
+      .col.s6
+        h5.margin-top-15 Trending Videos
+      .col.s6.right-align.pt-5
+        a.waves-effect.wave-pink.btn-flat.blue-text.text-darken-2.pt-5 More Trending Videos
+    
+    .owl-carousel
+      each video in trending
+        .card.hoverable
+          .card-image
+            img(src='/uploads/'+video.thumbnail)
+            span.new.badge.grey.darken-3(data-badge-caption="")= video.duration
+          .card-content= video.title
+            br
+            a.small.grey-text.darken-1(href='#')= video.author
+          .card-action
+            .badge.grey.lighten-2.left= video.payment
+            .badge.right.small= video.posted
+            div(style='clear: both')
+  hr.hr-style
+
+  section.no-pad
+    .row.no-margin
+      .col.s6
+        h5.margin-top-15 New Videos
+      .col.s6.right-align.pt-5
+        a.waves-effect.wave-pink.btn-flat.blue-text.text-darken-2.pt-5 More New Videos
+    
+    .owl-carousel
       each video in latests
         .card.hoverable
           .card-image
-            img(src='/uploads/'+n+'.jpg')
-            span.new.badge.grey.darken-3(data-badge-caption="") 8:99
-          .card-content
-            | I am a very simple card. I am good at 
+            img(src='/uploads/'+video.thumbnail)
+            span.new.badge.grey.darken-3(data-badge-caption="")= video.duration
+          .card-content= video.title
             br
-            a.small.grey-text.darken-1(href='#') investro1234
+            a.small.grey-text.darken-1(href='#')= video.author
           .card-action
-            .badge.grey.lighten-2.left $24.55
-            .badge.right.small A hour ago
+            .badge.grey.lighten-2.left= video.payment
+            .badge.right.small= video.posted
             div(style='clear: both')
   hr.hr-style
 

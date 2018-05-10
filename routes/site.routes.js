@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const generalData = require('../config/generalData');
 const steem = require('steem');
+const moment = require("moment");
 
 router.get('/test', (req, res) => {
   res.render('test.pug');
@@ -16,21 +17,92 @@ router.get('/', function(req, res){
     truncate_body: 1
   };
   let latests = [];
+  let trending = [];
+  let hot = [];
+  let json_metadata = {};
+  let paymentValue = 0;
+  let posted = '';
+  let duration = '';
+  let pv = '';
   steem.api.getDiscussionsByCreated(query, function(err, result) {
     if(!err) {
+      console.log('created');
       result.forEach(element => {
-        let json_metadata = JSON.parse(element.json_metadata);
+        json_metadata = JSON.parse(element.json_metadata);
+        paymentValue = parseFloat(element.total_payout_value) +
+                            parseFloat(element.curator_payout_value) +
+                            parseFloat(element.pending_payout_value);
+ 
+        posted = moment(element.created).fromNow();
+        duration = moment.utc(json_metadata.video.video_duration*1000).format('mm:ss')
+
+        pv = '$ ' + paymentValue.toFixed(2);
           let item = {
             title: element.title,
             thumbnail: json_metadata.video.thumbnail_path,
-            duration: json_metadata.video.video_duration,
-            author: element.author
+            duration: duration,
+            author: element.author,
+            payment: pv,
+            posted: posted
           }
           latests.push(item);
       });
+      steem.api.getDiscussionsByTrending(query, function(err, result) {
+        if(!err) {
+          console.log('trending');
+          result.forEach(element => {
+            json_metadata = JSON.parse(element.json_metadata);
+            paymentValue = parseFloat(element.total_payout_value) +
+                                parseFloat(element.curator_payout_value) +
+                                parseFloat(element.pending_payout_value);
+     
+            posted = moment(element.created).fromNow();
+            duration = moment.utc(json_metadata.video.video_duration*1000).format('mm:ss')
+    
+            pv = '$ ' + paymentValue.toFixed(2);
+              let item = {
+                title: element.title,
+                thumbnail: json_metadata.video.thumbnail_path,
+                duration: duration,
+                author: element.author,
+                payment: pv,
+                posted: posted
+              }
+              trending.push(item);
+          });
+          steem.api.getDiscussionsByHot(query, function(err, result) {
+            if(!err) {
+              console.log('hot');
+              result.forEach(element => {
+                json_metadata = JSON.parse(element.json_metadata);
+                paymentValue = parseFloat(element.total_payout_value) +
+                                    parseFloat(element.curator_payout_value) +
+                                    parseFloat(element.pending_payout_value);
+         
+                posted = moment(element.created).fromNow();
+                duration = moment.utc(json_metadata.video.video_duration*1000).format('mm:ss')
+        
+                pv = '$ ' + paymentValue.toFixed(2);
+                  let item = {
+                    title: element.title,
+                    thumbnail: json_metadata.video.thumbnail_path,
+                    duration: duration,
+                    author: element.author,
+                    payment: pv,
+                    posted: posted
+                  }
+                  hot.push(item);
+              });
+              console.log('done');
+              res.render('index', { latests, trending, hot });
+            }
+          });
+        }
+      });
     }
   });
-  res.render('index', { latests });
+
+
 });
 
 //login
