@@ -1,6 +1,6 @@
 module.exports = {
-  SERVER_IP: '127.0.0.1',
-  SERVER_NAME: 'http://localhost:8080',
+  SERVER_IP: '54.38.207.246',
+  SERVER_NAME: 'http://dpornclassic.co',
   categoryList : [
     'Straight',
     'Lesbian',
