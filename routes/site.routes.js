@@ -16,7 +16,7 @@ router.get('/', function(req, res){
     truncate_body: 1
   };
   steem.api.getDiscussionsByCreated(query, function(err, result) {
-    //console.log(err, result);
+    console.log(err, result);
   });
   res.render('index');
 });
