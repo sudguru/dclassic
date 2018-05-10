@@ -1,0 +1,34 @@
+doctype html
+html(lang='en')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0')
+    link(rel='icon', type='image/png', href='/imgs/logod.png')
+    title DPORN CLASSIC
+    // CSS
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400",rel="stylesheet")
+    link(href='/css/materialize.min.css', type='text/css', rel='stylesheet', media='screen,projection')
+    link(href='/css/test.css', type='text/css', rel='stylesheet', media='screen,projection')
+
+
+  body.grey.lighten-4
+
+    #modalLoading.modal
+      .modal-content(style='display:flex; justify-content:center; align-items: center')
+        img(src='/imgs/loading.gif')
+    
+    #anothermodal.modal
+      .modal-content(style='display:flex; justify-content:center; align-items: center')
+        img(src='/imgs/loading.gif')
+        
+    .container
+      a#btn-test.btn Modal
+      a#btn-testtwo.btn Modal2
+
+    // Scripts adfada
+    script(src='/js/jquery.min.js')
+    script(src='/js/materialize.js')
+    script(src='/js/test.js')
+    block footJS
+    

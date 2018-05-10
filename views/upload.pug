@@ -74,7 +74,11 @@ block content
                     .col.s12.m12
                       br
                       a#save-data.btn.waves-effect.waves-light.blue(href='#') Save Video / Post
-
+  #modalLoading.modal
+    .modal-content(style='display:flex; justify-content:center; align-items: center')
+      img(src='/imgs/loading.gif')
+  img#thumbimage(src='/imgs/watermark.png', style='display: none')
 block footJS
+  srcript(src='/js/watertext.umd.min.js')
   script(src='/js/upload.jquery.js')
   

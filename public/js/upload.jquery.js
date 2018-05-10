@@ -1,5 +1,8 @@
 (function($){
   $(function(){
+    $('#modalLoading').modal({
+      dismissible: false
+    });
     localStorage.removeItem('myFile');
     localStorage.removeItem('myThumb');
     $('#btn-choose').on('change', function(event) {
@@ -34,8 +37,8 @@
       var w = v.videoWidth;
       var h = v.videoHeight;
       if(w > 0){
-        var nw = 375;
-        var nh = 375 * (h/w);
+        var nw = 600;
+        var nh = 600 * (h/w);
         computeFrame(nw, nh);
       }
       
@@ -56,6 +59,8 @@
       ctx1.drawImage(v, 0, 0, c1.width, c1.height);
   
       const frame = ctx1.getImageData(0, 0, c1.width, c1.height);
+      
+    
       const l = frame.data.length / 4;
   
       for (let i = 0; i < l; i++) {
@@ -80,10 +85,21 @@
       } else {
         v.pause();
         $(this).html('Play');
-        //$('#btn-upload').removeClass('disabled');
+        watermark();
+        // watertext(el.src, {text: 'Awesome cat'})
+        // .then(function(url){el.src = url;});
         $('#btn-snap').removeClass('disabled');
       }
     });
+
+    function watermark() {
+      const c1 = document.querySelector('canvas');
+      const ctx1 = c1.getContext('2d');
+      //const thumbimage = $('#thumbimage');
+      const thumbimage = document.querySelector('#thumbimage');
+      ctx1.drawImage(thumbimage, 10, 10);
+      ctx1.save();
+    }
 
     $('#btn-snap').on('click', function() {
       const v = document.querySelector('video');
@@ -206,10 +222,10 @@
       {
         alert("Please Enter Title");
         return;
-      } else if(typeof thumbnail_path == undefined || thumbnail_path =="") {
+      } else if(typeof thumbnail_path == undefined || thumbnail_path == null || thumbnail_path =="") {
         alert("Snap not uploaded yet");
         return;
-      } else if (typeof video_path == undefined || video_path == "") {
+      } else if (typeof video_path == undefined || video_path == null || video_path == "") {
         alert ("Video not uploaded yet");
         return;
       }
@@ -232,7 +248,9 @@
         power_up = 100;
       }
 
-
+      var modalel = document.querySelector('#modalLoading');
+      var modalInstance = M.Modal.getInstance(modalel)
+      modalInstance.open();
       $.ajax({
           type: 'POST',
           url: '/upload/save',
@@ -242,9 +260,11 @@
           success: (res) => {
               console.log(res);
               //var batch_id = res.batch_id
+              modalInstance.close();
               window.location.href='/';
           },
           error: (err) => {
+              modalInstance.close();
               console.log(err);
           }
       });

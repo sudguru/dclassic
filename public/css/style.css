@@ -11,7 +11,6 @@
     font-family: 'roboto';
 }
 
-
 a.brand-logo img {
     margin-top: 9px;
     margin-left: 60px;
@@ -56,7 +55,6 @@ a.brand-logo img {
         width: auto;
         margin-top: 11px;
     }
-
     .mt-20-small {
         margin: 20px auto;
     }
@@ -95,6 +93,7 @@ h5 {
 .margin-top-15 {
     margin: 15px 0 0 0 0 !important;
 }
+
 .mr-5 {
     margin-right: 5px !important;
 }
@@ -143,8 +142,6 @@ nav ul a {
     opacity: 0.7;
 }
 
-
-
 a.small {
     font-size: 80%;
 }
@@ -189,6 +186,17 @@ input[type=text]:not(.browser-default):focus:not([readonly]) {
     max-height: 1000px;
     height: auto;
 }
+
 .mt-20-small {
     align-self: center;
+}
+
+#modalLoading {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#modalLoading:focus {
+    outline: none;
 }
