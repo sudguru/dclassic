@@ -16,7 +16,7 @@ router.get('/', function(req, res){
     truncate_body: 1
   };
   steem.api.getDiscussionsByCreated(query, function(err, result) {
-    console.log(err, result);
+    //console.log(err, result);
   });
   res.render('index');
 });
@@ -25,7 +25,7 @@ router.get('/', function(req, res){
 router.get('/login', function(req, res) {
   var state = req.query.state;
   var link = req.app.locals.SCapi.getLoginURL(state);
-  //console.log(link);
+  console.log(link);
   res.writeHead(301, { Location: link });
   res.end();
 });
