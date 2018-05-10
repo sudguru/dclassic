@@ -25,7 +25,7 @@ router.get('/', function(req, res){
 router.get('/login', function(req, res) {
   var state = req.query.state;
   var link = req.app.locals.SCapi.getLoginURL(state);
-  console.log(link);
+  console.log('link is', link);
   res.writeHead(301, { Location: link });
   res.end();
 });
