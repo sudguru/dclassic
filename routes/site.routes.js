@@ -15,10 +15,22 @@ router.get('/', function(req, res){
     filter_tags: ["test"],
     truncate_body: 1
   };
+  let latests = [];
   steem.api.getDiscussionsByCreated(query, function(err, result) {
-    console.log(err, result);
+    if(!err) {
+      result.forEach(element => {
+        let json_metadata = JSON.parse(element.json_metadata);
+          let item = {
+            title: element.title,
+            thumbnail: json_metadata.video.thumbnail_path,
+            duration: json_metadata.video.video_duration,
+            author: element.author
+          }
+          latests.push(item);
+      });
+    }
   });
-  res.render('index');
+  res.render('index', { latests });
 });
 
 //login
