@@ -47,7 +47,7 @@ router.get('/connect', function(req, res){
   var expires_in = req.query.expires_in;
   var state = req.query.state;
   req.app.locals.SCapi.setAccessToken(access_token)
-  state = state == 'home' ? '' : state;
+  state = state == 'homepage' ? '' : state;
   res.redirect('/'+state);
 
 });
