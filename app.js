@@ -28,7 +28,7 @@ app.set('env', 'development');
 //steemconnect v2 api
 SCapi = sc2.Initialize({
   app: 'steemporn.app',
-  callbackURL: generalData.SERVER_NAME + '/connect',
+  callbackURL: generalData.SERVER_NAME + '/auth',
   scope: ['vote', 'comment', 'delete_comment', 'comment_options', 'custom_json', 'claim_reward_balance']
 });
 
@@ -70,14 +70,15 @@ app.use(morgan(function (tokens, req, res) {
 
 app.get('*', function(req, res, next){
     res.locals.username = req.session.username || null;
-    console.log('s', res.locals.username)
-    console.log('q', req.session.username);
+    res.locals.SERVER_NAME = generalData.SERVER_NAME;
     next();
 });
 
 let site = require('./routes/site.routes');
-app.use('/', site);
+let auth = require('./routes/auth.routes');
 let upload = require('./routes/upload.routes');
+app.use('/', site);
+app.use('/auth', auth);
 app.use('/upload', upload);
 
 // catch 404 and forward to error handler
@@ -97,21 +98,5 @@ app.use(function(err, req, res, next) {
   res.send(err.message);
 });
 
-function ensureAuthenticated(req, res, next){
-  let username = localStorage.getItem('dpc_username');
-  let expirationTimestamp = localStorage.getItem('dpc_expiration');
-  let currentTimestamp = moment(new Date()).format('X');
-  let validUser = (currentTimestamp > expirationTimestamp) ? true : false;
-  if(validUser){
-    if(generalData.usersAllowedToUpload.indexOf(username) >= 0 )
-    {
-      return next();
-    } else {
-      res.redirect('/?msg=Sorry You are not Authorized to upload.');
-    }
-  } else {
-    redirectPath = req.path;
-    res.redirect('/login?state='+redirectPath);
-  }
-}
+
 module.exports = app;

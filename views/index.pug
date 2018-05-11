@@ -58,7 +58,8 @@ block content
       each video in latests
         .card.hoverable
           .card-image
-            img(src='/uploads/'+video.thumbnail)
+            a(href=`${SERVER_NAME}/video/${video.permlink}/${video.author}`)
+              img(src='/uploads/'+video.thumbnail)
             span.new.badge.grey.darken-3(data-badge-caption="")= video.duration
           .card-content= video.title
             br

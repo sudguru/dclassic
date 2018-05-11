@@ -12,7 +12,6 @@ html(lang='en')
     block headCSS
     link(href='/css/style.css', type='text/css', rel='stylesheet', media='screen,projection')
 
-
   body.grey.lighten-4
     .navbar-fixed
       nav.white.navbar-fixed(role='navigation')
@@ -30,10 +29,10 @@ html(lang='en')
                 i.material-icons.grey-text.text-darken-4 cloud_upload
             if !username
               li.hide-on-med-and-up.show-on-medium
-                a(href='/login?state=index') 
+                a(href='/auth/login?state=griha') 
                   i.material-icons.grey-text.text-darken-4 input
               li.hide-on-med-and-down
-                a.waves-effect.waves-light.btn.red(href='/login?state=index') 
+                a.waves-effect.waves-light.btn.red(href='/auth/login?state=griha') 
                   i.material-icons.right input
                   | Login
             else        
@@ -41,10 +40,10 @@ html(lang='en')
                 a.tooltipped(href='/profile/'+username, data-position='bottom', data-tooltip='@'+username)
                   img.circle.responsive-img(src='https://img.busy.org/@'+username, alt='', style="height: 30px; margin-top:15px")
               li.hide-on-med-and-up.show-on-medium
-                a(href='/logout') 
+                a(href='/auth/logout') 
                   i.material-icons.grey-text.text-darken-4 exit_to_app
               li.hide-on-med-and-down
-                a.waves-effect.waves-light.btn.red(href='/logout') 
+                a.waves-effect.waves-light.btn.red(href='/auth/logout') 
                   i.material-icons.right exit_to_app
                   | Log Out
           a.sidenav-trigger.show-on-large(href='#', data-target='slide-out')

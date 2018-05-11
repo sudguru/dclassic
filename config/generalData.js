@@ -1,7 +1,7 @@
 module.exports = {
   SERVER_IP: '54.38.207.246',
-  SERVER_NAME: 'https://dpornclassic.co',
-  //SERVER_NAME: 'http://localhost:8080',
+  // SERVER_NAME: 'https://dpornclassic.co',
+  SERVER_NAME: 'http://localhost:8080',
   categoryList : [
     'Straight',
     'Lesbian',
@@ -19,7 +19,7 @@ module.exports = {
     'Teen'
   ],
   usersAllowedToUpload: [
-    'sudguru', 
+    'sudguru',
     'pranishg'
   ] 
 }

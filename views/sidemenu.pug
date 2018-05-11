@@ -6,12 +6,12 @@ ul#slide-out.sidenav
       if !username
         a(href='#')
           img.circle(src='/imgs/profile.png')
-        a.white-text(href='/login?state=index')
+        a.white-text(href='/auth/login?state=griha')
           | Login
       else 
         a(href='/profile/'+username)
           img.circle(src='https://img.busy.org/@'+username)
-        a(href='/profile/'+username)
+        a(href='/video/'+username)
           span.white-text.name= username
           br
   li
@@ -35,7 +35,7 @@ ul#slide-out.sidenav
       i.material-icons redeem
       | New Videos
   li
-    a.waves-effect.sidenav-close(href='/subscriptions')
+    a.waves-effect.sidenav-close(href='/private/subscriptions')
       i.material-icons subscriptions
       | Subscriptions
   li
@@ -43,13 +43,13 @@ ul#slide-out.sidenav
   li
     a.subheader Library
   li
-    a.waves-effect.sidenav-close(href='#!') 
+    a.waves-effect.sidenav-close(href='/private/history') 
       i.material-icons history
       | History
-    a.waves-effect.sidenav-close(href='#!') 
+    a.waves-effect.sidenav-close(href='/private/watchlater') 
       i.material-icons watch_later
       | Watch Later
-    a.waves-effect.sidenav-close(href='#!') 
+    a.waves-effect.sidenav-close(href='/private/liked') 
       i.material-icons thumb_up
       | Liked Videos
   li

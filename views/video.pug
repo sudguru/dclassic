@@ -1,0 +1,43 @@
+extends layout
+block headCSS
+  link(href='/css/video-js.css', type='text/css', rel='stylesheet')
+  link(href='/css/video_custom.css', type='text/css', rel='stylesheet')
+block content
+  section
+    .row.margin-vertical-15
+      .col.s12.m12.l8.xl8
+        video#my_video_1.video-js.vjs-default-skin(width='100%', height='360px', controls='', preload='none', poster=video.thumbnail, data-setup='{ "aspectRatio":"640:360", "playbackRates": [0.5, 1, 1.5, 2] }')
+          source(src=video.videopath, type='video/mp4')
+        .row.no-margin
+          .col.s12.m12.l12.xl12.border-left.border-right
+            h5= video.title
+        .row.no-margin
+          .col.s6.m6.l6.xl6.border-left
+            each tag in tags
+              a(href='/catgory/'+tag)
+                span.grey.left(style='border-radius:6px; padding:3px 10px; color: #222; margin-right: 5px')= tag 
+          .col.s6.m6.l6.xl6.border-right
+              .right
+                a.btn-flat.dropdown-trigger(href='/private/upvote/'+username+'/'+video.author, data-target='dropdown1')
+                  i.material-icons.left thumb_up
+                  | #{voters.length}
+        .row.no-margin
+          .col.s6.m6.l6.xl6
+            img.circle.responsive-img.left(src='https://img.busy.org/@'+video.author, alt='', style="height: 50px; margin-top: 10px; margin-right: 15px")
+            .left= video.author
+              br
+              a.waves-effect.waves-light.btn.red(href='/private/subscribe') Subscribe ( 5 )
+          .col.s6.m6.l6.xl6(style='paddin-top:25px')
+            h5.no-margin.right= video.payment
+    
+            
+                  
+
+      .col.s12.m12.l4.xl4
+        h6 Similar Videos
+  ul#dropdown1.dropdown-content.collection
+    each voter in voters
+      li.collection-item= voter
+block footJS
+  script(src='/js/video.js')
+  script(src='/js/video-init.js')

@@ -3,65 +3,93 @@ const router = express.Router();
 const generalData = require('../config/generalData');
 const steem = require('steem');
 const moment = require("moment");
-var jwt_decode = require('jwt-decode');
-var util = require('util');
-router.get('/test', (req, res) => {
-  res.render('test.pug');
-});
 
 // Home Route
 router.get('/', function(req, res){
   latests = [];
   trending = [];
   hot = [];
-  // getCreated()
-  // .then(getHot)
-  // .then(getTrending)
-  // .then(trending)
-  // .then(() => {
-  //   console.log('xxx')
-  //   res.render('index', { latests, hot, trending })
-  // });
-  res.render('index', { latests, hot, trending })
-  
+  getCreated()
+  .then(getHot)
+  .then(getTrending)
+  .then(trending)
+  .then(() => {
+    //console.log('xxx')
+    res.render('index', { latests, hot, trending })
+  });
+  //res.render('index', { latests, hot, trending })
 });
 
-//login
-router.get('/login', function(req, res) {
-  var state = req.query.state;
-  var link = SCapi.getLoginURL(state);
-  console.log('link is', link);
-  res.writeHead(301, { Location: link });
-  res.end();
+router.get('/category/:categoryname', function(req, res) {
+
 });
 
+router.get('/video/:author', function(req, res) {
 
-//logout
-router.get('/logout', function(req, res) {
-  SCapi.revokeToken(function (error, result) {
-    req.session.username = null;
-    req.session.expirationTimestamp = null;
-    res.redirect('/');
+});
+
+router.get('/video/:permlink/:author', function(req, res) {
+  const author = req.params.author;
+  const permlink = req.params.permlink;
+  steem.api.getContent(author, permlink, function(err, result) {
+    json_metadata = JSON.parse(result.json_metadata);
+    paymentValue = parseFloat(result.total_payout_value) +
+                        parseFloat(result.curator_payout_value) +
+                        parseFloat(result.pending_payout_value);
+
+    posted = moment(result.created).fromNow();
+    duration = moment.utc(json_metadata.video.video_duration*1000).format('mm:ss'),
+    pv = '$ ' + paymentValue.toFixed(2);
+      let video = {
+        title: result.title,
+        thumbnail : generalData.SERVER_NAME + '/uploads/' + json_metadata.video.thumbnail_path,
+        videopath : generalData.SERVER_NAME + '/uploads/' + json_metadata.video.video_path,
+        duration: duration,
+        author: result.author,
+        payment: pv,
+        posted: posted,
+        permlink: permlink
+    }
+    let voters = [];
+    result.active_votes.forEach(ac => {
+      voters.push(ac.voter);
+    })
+    console.log(voters)
+    tags = json_metadata.video.categories.split(",");
+    res.render('video', { video, voters, tags });
   });
 });
+router.get('/hot', function(req,res) {
 
-
-//from steemconnect
-router.get('/connect', function(req, res){
-  var access_token = req.query.access_token;
-  var expires_in = req.query.expires_in;
-  var state = req.query.state;
-  SCapi.setAccessToken(access_token)
-  state = state == 'index' ? '' : state;
-  var decoded = jwt_decode(access_token);
-  //console.log('dfg' + util.inspect(decoded, false, null));
-  var currentTimestamp = moment(new Date()).format('X');
-  var expirationTimestamp = decoded.exp - 86400; //1 day buffer
-  req.session.username = decoded.user;
-  req.session.expirationTimestamp = expirationTimestamp;
-  res.redirect('/'+state);
 });
 
+router.get('/trending', function(req,res) {
+
+});
+
+router.get('/new', function(req,res) {
+
+})
+
+router.get('/subscriptions', function(req, res) {
+
+});
+
+router.get('/history', function(req, res) {
+
+});
+
+router.get('/liked', function(req, res) {
+
+});
+
+router.get('/watchlater', function(req, res) {
+
+});
+
+router.get('/video/:videotype', function(req, res) {
+
+});
 
 const getCreated = function() {
   const promise = new Promise(function(resolve, reject) {
@@ -95,12 +123,13 @@ const getCreated = function() {
               duration: duration,
               author: element.author,
               payment: pv,
-              posted: posted
+              posted: posted,
+              permlink: element.permlink
             }
             data.push(item);
         });
         latests = data;
-        console.log('l', latests)
+        //console.log('l', latests)
         resolve(1);
       } else {
         resolve(0);
@@ -137,7 +166,8 @@ const getHot = function() {
               duration: duration,
               author: element.author,
               payment: pv,
-              posted: posted
+              posted: posted,
+              permlink: element.permlink
             }
             data.push(item);
         });
@@ -178,7 +208,8 @@ const getTrending = function() {
               duration: duration,
               author: element.author,
               payment: pv,
-              posted: posted
+              posted: posted,
+              permlink: element.permlink
             }
             data.push(item);
         });

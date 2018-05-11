@@ -60,7 +60,7 @@ exports.savePost = async function(req, res, next) {
 
   const videotags = [];
 
-  videotags.push('nfsw');
+  videotags.push('nsfw');
   videotags.push('dpornclassic');
   videotags.push('dpornclassicvideo');
 
