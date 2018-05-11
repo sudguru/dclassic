@@ -707,3 +707,170 @@ GET /js/materialize.js.map 404 9 --  -- Thu May 10 2018 16:43:08 GMT+0545 (+0545
 GET /uploads/myThumb-1525926197601.jpg 404 9 --  -- Thu May 10 2018 16:43:09 GMT+0545 (+0545) -- 1284.493 ms
 GET /uploads/myThumb-1525929381243.jpg 404 9 --  -- Thu May 10 2018 16:43:09 GMT+0545 (+0545) -- 1301.436 ms
 GET /uploads/myThumb-1525633887094.jpg 404 9 --  -- Thu May 10 2018 16:43:09 GMT+0545 (+0545) -- 1465.978 ms
+GET / 200 9949 --  -- Thu May 10 2018 19:57:24 GMT+0545 (+0545) -- 8662.971 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 --  -- Thu May 10 2018 19:57:25 GMT+0545 (+0545) -- 1263.687 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 --  -- Thu May 10 2018 19:57:25 GMT+0545 (+0545) -- 1442.601 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 --  -- Thu May 10 2018 19:57:25 GMT+0545 (+0545) -- 1498.890 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 --  -- Thu May 10 2018 19:57:25 GMT+0545 (+0545) -- 1530.965 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 --  -- Thu May 10 2018 19:57:25 GMT+0545 (+0545) -- 1521.884 ms
+GET /login?state=new 301  --  -- Thu May 10 2018 19:57:36 GMT+0545 (+0545) -- 1421.242 ms
+GET / 304  --  -- Thu May 10 2018 19:58:53 GMT+0545 (+0545) -- 6670.349 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 --  -- Thu May 10 2018 19:58:54 GMT+0545 (+0545) -- 1325.864 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 --  -- Thu May 10 2018 19:58:54 GMT+0545 (+0545) -- 1387.343 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 --  -- Thu May 10 2018 19:58:54 GMT+0545 (+0545) -- 1425.113 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 --  -- Thu May 10 2018 19:58:54 GMT+0545 (+0545) -- 1408.475 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 --  -- Thu May 10 2018 19:58:54 GMT+0545 (+0545) -- 1518.373 ms
+GET / 200 9945 --  -- Thu May 10 2018 20:00:38 GMT+0545 (+0545) -- 8721.509 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 --  -- Thu May 10 2018 20:00:39 GMT+0545 (+0545) -- 1135.261 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 --  -- Thu May 10 2018 20:00:39 GMT+0545 (+0545) -- 1207.429 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 --  -- Thu May 10 2018 20:00:39 GMT+0545 (+0545) -- 1197.670 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 --  -- Thu May 10 2018 20:00:39 GMT+0545 (+0545) -- 1229.369 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 --  -- Thu May 10 2018 20:00:39 GMT+0545 (+0545) -- 1221.901 ms
+GET /login?state=h 301  --  -- Thu May 10 2018 20:00:41 GMT+0545 (+0545) -- 317.157 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InByYW5pc2hnIiwic2NvcGUiOlsidm90ZSIsImNvbW1lbnQiLCJkZWxldGVfY29tbWVudCIsImNvbW1lbnRfb3B0aW9ucyIsImN1c3RvbV9qc29uIiwiY2xhaW1fcmV3YXJkX2JhbGFuY2UiXSwiaWF0IjoxNTI1OTYxNzUyLCJleHAiOjE1MjY1NjY1NTJ9.-axf0qqgABa-HeCTZhr-ky9ORay34BlW3l3gdioOwnw&expires_in=604800&state=h&username=pranishg 302 46 --  -- Thu May 10 2018 20:00:53 GMT+0545 (+0545) -- 1330.134 ms
+GET / 200 10225 -- pranishg -- Thu May 10 2018 20:01:01 GMT+0545 (+0545) -- 7703.431 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 -- pranishg -- Thu May 10 2018 20:01:02 GMT+0545 (+0545) -- 1319.164 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 -- pranishg -- Thu May 10 2018 20:01:02 GMT+0545 (+0545) -- 1334.601 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 -- pranishg -- Thu May 10 2018 20:01:02 GMT+0545 (+0545) -- 1336.235 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 -- pranishg -- Thu May 10 2018 20:01:03 GMT+0545 (+0545) -- 2299.826 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 -- pranishg -- Thu May 10 2018 20:01:03 GMT+0545 (+0545) -- 2316.303 ms
+GET /   -- pranishg -- Thu May 10 2018 20:02:10 GMT+0545 (+0545) --  ms
+GET / 304  -- pranishg -- Thu May 10 2018 20:03:02 GMT+0545 (+0545) -- 7178.300 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 -- pranishg -- Thu May 10 2018 20:03:04 GMT+0545 (+0545) -- 1685.748 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 -- pranishg -- Thu May 10 2018 20:03:04 GMT+0545 (+0545) -- 1665.194 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 -- pranishg -- Thu May 10 2018 20:03:05 GMT+0545 (+0545) -- 2697.291 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 -- pranishg -- Thu May 10 2018 20:03:05 GMT+0545 (+0545) -- 2716.403 ms
+GET /js/materialize.js.map 404 9 -- pranishg -- Thu May 10 2018 20:03:27 GMT+0545 (+0545) -- 1268.846 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 -- pranishg -- Thu May 10 2018 20:03:27 GMT+0545 (+0545) -- 1252.611 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 -- pranishg -- Thu May 10 2018 20:03:28 GMT+0545 (+0545) -- 2243.915 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 -- pranishg -- Thu May 10 2018 20:03:28 GMT+0545 (+0545) -- 2360.893 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 -- pranishg -- Thu May 10 2018 20:03:29 GMT+0545 (+0545) -- 2914.385 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 --  -- Thu May 10 2018 20:03:33 GMT+0545 (+0545) -- 31572.101 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 -- pranishg -- Thu May 10 2018 20:03:35 GMT+0545 (+0545) -- 1292.179 ms
+GET / 304  -- pranishg -- Thu May 10 2018 20:03:52 GMT+0545 (+0545) -- 7000.867 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 -- pranishg -- Thu May 10 2018 20:03:53 GMT+0545 (+0545) -- 1153.179 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 -- pranishg -- Thu May 10 2018 20:03:54 GMT+0545 (+0545) -- 1262.389 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 -- pranishg -- Thu May 10 2018 20:03:54 GMT+0545 (+0545) -- 1292.716 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 -- pranishg -- Thu May 10 2018 20:03:54 GMT+0545 (+0545) -- 1310.790 ms
+GET /js/materialize.js.map 404 9 -- pranishg -- Thu May 10 2018 20:03:54 GMT+0545 (+0545) -- 1275.358 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 -- pranishg -- Thu May 10 2018 20:03:55 GMT+0545 (+0545) -- 2728.812 ms
+GET /   -- pranishg -- Thu May 10 2018 20:04:07 GMT+0545 (+0545) --  ms
+GET / 200 10225 -- pranishg -- Thu May 10 2018 20:04:32 GMT+0545 (+0545) -- 7177.734 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 -- pranishg -- Thu May 10 2018 20:04:34 GMT+0545 (+0545) -- 1393.960 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 -- pranishg -- Thu May 10 2018 20:04:34 GMT+0545 (+0545) -- 1391.773 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 -- pranishg -- Thu May 10 2018 20:04:34 GMT+0545 (+0545) -- 1459.465 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 -- pranishg -- Thu May 10 2018 20:04:35 GMT+0545 (+0545) -- 2366.266 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 -- pranishg -- Thu May 10 2018 20:04:35 GMT+0545 (+0545) -- 2335.079 ms
+GET /js/materialize.js.map 404 9 -- pranishg -- Thu May 10 2018 20:04:36 GMT+0545 (+0545) -- 2758.532 ms
+GET / 200 9945 --  -- Thu May 10 2018 20:05:59 GMT+0545 (+0545) -- 7880.352 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 -- pranishg -- Thu May 10 2018 20:06:00 GMT+0545 (+0545) -- 1435.102 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 -- pranishg -- Thu May 10 2018 20:06:01 GMT+0545 (+0545) -- 2329.034 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 -- pranishg -- Thu May 10 2018 20:06:01 GMT+0545 (+0545) -- 2342.492 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 -- pranishg -- Thu May 10 2018 20:06:01 GMT+0545 (+0545) -- 2468.826 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 --  -- Thu May 10 2018 20:06:30 GMT+0545 (+0545) -- 31406.169 ms
+GET /test 304  --  -- Thu May 10 2018 20:07:05 GMT+0545 (+0545) -- 1735.230 ms
+GET /t   --  -- Thu May 10 2018 20:08:06 GMT+0545 (+0545) --  ms
+GET /t   --  -- Thu May 10 2018 20:09:02 GMT+0545 (+0545) --  ms
+GET /   --  -- Thu May 10 2018 20:15:46 GMT+0545 (+0545) --  ms
+GET /t   --  -- Thu May 10 2018 20:16:02 GMT+0545 (+0545) --  ms
+GET / 200 9945 --  -- Thu May 10 2018 20:16:15 GMT+0545 (+0545) -- 9097.060 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 --  -- Thu May 10 2018 20:16:18 GMT+0545 (+0545) -- 3016.399 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 --  -- Thu May 10 2018 20:16:18 GMT+0545 (+0545) -- 3025.171 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 --  -- Thu May 10 2018 20:16:18 GMT+0545 (+0545) -- 3031.790 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 --  -- Thu May 10 2018 20:16:18 GMT+0545 (+0545) -- 3038.142 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 --  -- Thu May 10 2018 20:16:18 GMT+0545 (+0545) -- 3058.342 ms
+GET /js/materialize.js.map 404 9 --  -- Thu May 10 2018 20:16:18 GMT+0545 (+0545) -- 2793.907 ms
+GET / 304  --  -- Thu May 10 2018 20:17:43 GMT+0545 (+0545) -- 12639.763 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 --  -- Thu May 10 2018 20:17:44 GMT+0545 (+0545) -- 1122.136 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 --  -- Thu May 10 2018 20:17:44 GMT+0545 (+0545) -- 1095.035 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 --  -- Thu May 10 2018 20:17:45 GMT+0545 (+0545) -- 1571.836 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 --  -- Thu May 10 2018 20:17:45 GMT+0545 (+0545) -- 1593.591 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 --  -- Thu May 10 2018 20:17:45 GMT+0545 (+0545) -- 1589.116 ms
+GET /js/materialize.js.map 404 9 --  -- Thu May 10 2018 20:17:45 GMT+0545 (+0545) -- 1437.547 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InByYW5pc2hnIiwic2NvcGUiOlsidm90ZSIsImNvbW1lbnQiLCJkZWxldGVfY29tbWVudCIsImNvbW1lbnRfb3B0aW9ucyIsImN1c3RvbV9qc29uIiwiY2xhaW1fcmV3YXJkX2JhbGFuY2UiXSwiaWF0IjoxNTI1OTYyODQ5LCJleHAiOjE1MjY1Njc2NDl9.dKvBwp0mbXmCl-AEk8jwnw69yOhJteemcFIjHtK7Gu4&expires_in=604800&state=h&username=pranishg 500 50 --  -- Thu May 10 2018 20:19:12 GMT+0545 (+0545) -- 1792.598 ms
+GET /favicon.ico 404 9 --  -- Thu May 10 2018 20:19:13 GMT+0545 (+0545) -- 1196.349 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InByYW5pc2hnIiwic2NvcGUiOlsidm90ZSIsImNvbW1lbnQiLCJkZWxldGVfY29tbWVudCIsImNvbW1lbnRfb3B0aW9ucyIsImN1c3RvbV9qc29uIiwiY2xhaW1fcmV3YXJkX2JhbGFuY2UiXSwiaWF0IjoxNTI1OTYyODQ5LCJleHAiOjE1MjY1Njc2NDl9.dKvBwp0mbXmCl-AEk8jwnw69yOhJteemcFIjHtK7Gu4&expires_in=604800&state=h&username=pranishg 302 46 --  -- Thu May 10 2018 20:20:04 GMT+0545 (+0545) -- 1595.071 ms
+GET / 200 10225 -- pranishg -- Thu May 10 2018 20:20:13 GMT+0545 (+0545) -- 8712.732 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 -- pranishg -- Thu May 10 2018 20:20:14 GMT+0545 (+0545) -- 1335.918 ms
+GET /js/materialize.js.map 404 9 -- pranishg -- Thu May 10 2018 20:20:14 GMT+0545 (+0545) -- 1319.400 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 --  -- Thu May 10 2018 20:20:15 GMT+0545 (+0545) -- 2138.042 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 -- pranishg -- Thu May 10 2018 20:20:15 GMT+0545 (+0545) -- 2148.330 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 -- pranishg -- Thu May 10 2018 20:20:15 GMT+0545 (+0545) -- 2160.548 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 -- pranishg -- Thu May 10 2018 20:20:15 GMT+0545 (+0545) -- 2483.571 ms
+GET / 200 10225 -- pranishg -- Thu May 10 2018 20:20:55 GMT+0545 (+0545) -- 6292.907 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 -- pranishg -- Thu May 10 2018 20:20:57 GMT+0545 (+0545) -- 1373.332 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 -- pranishg -- Thu May 10 2018 20:20:57 GMT+0545 (+0545) -- 1462.338 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 -- pranishg -- Thu May 10 2018 20:20:58 GMT+0545 (+0545) -- 2332.429 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 -- pranishg -- Thu May 10 2018 20:20:58 GMT+0545 (+0545) -- 2592.462 ms
+GET /uploads/myThumb-1525926197601.jpg   --  -- Thu May 10 2018 20:21:18 GMT+0545 (+0545) --  ms
+GET /uploads/myThumb-1525698573592.jpg 404 9 -- pranishg -- Thu May 10 2018 20:21:21 GMT+0545 (+0545) -- 2614.040 ms
+GET /   -- pranishg -- Thu May 10 2018 20:22:45 GMT+0545 (+0545) --  ms
+GET / 304  -- pranishg -- Thu May 10 2018 20:23:04 GMT+0545 (+0545) -- 10804.008 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 -- pranishg -- Thu May 10 2018 20:23:05 GMT+0545 (+0545) -- 1278.446 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 -- pranishg -- Thu May 10 2018 20:23:05 GMT+0545 (+0545) -- 1374.673 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 -- pranishg -- Thu May 10 2018 20:23:05 GMT+0545 (+0545) -- 1373.597 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 -- pranishg -- Thu May 10 2018 20:23:05 GMT+0545 (+0545) -- 1439.457 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 --  -- Thu May 10 2018 20:23:06 GMT+0545 (+0545) -- 2264.600 ms
+GET /logout 500 47 -- pranishg -- Thu May 10 2018 20:23:25 GMT+0545 (+0545) -- 8693.026 ms
+GET /favicon.ico 404 9 -- pranishg -- Thu May 10 2018 20:23:28 GMT+0545 (+0545) -- 2262.705 ms
+GET /favicon.ico 404 9 -- pranishg -- Thu May 10 2018 20:23:28 GMT+0545 (+0545) -- 2286.477 ms
+GET /logout 500 26 --  -- Thu May 10 2018 20:23:57 GMT+0545 (+0545) -- 1402.333 ms
+GET /logout 302 46 --  -- Thu May 10 2018 20:24:35 GMT+0545 (+0545) -- 16428.480 ms
+GET / 200 9945 --  -- Thu May 10 2018 20:25:02 GMT+0545 (+0545) -- 27280.518 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 --  -- Thu May 10 2018 20:25:11 GMT+0545 (+0545) -- 6197.534 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 --  -- Thu May 10 2018 20:25:11 GMT+0545 (+0545) -- 6198.629 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 --  -- Thu May 10 2018 20:25:11 GMT+0545 (+0545) -- 6203.029 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 --  -- Thu May 10 2018 20:25:11 GMT+0545 (+0545) -- 6189.690 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 --  -- Thu May 10 2018 20:25:11 GMT+0545 (+0545) -- 6249.234 ms
+GET /   --  -- Thu May 10 2018 20:27:13 GMT+0545 (+0545) --  ms
+GET /   --  -- Thu May 10 2018 20:27:29 GMT+0545 (+0545) --  ms
+GET / 200 9945 --  -- Thu May 10 2018 20:27:56 GMT+0545 (+0545) -- 17305.208 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 --  -- Thu May 10 2018 20:27:57 GMT+0545 (+0545) -- 437.385 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 --  -- Thu May 10 2018 20:27:58 GMT+0545 (+0545) -- 1460.636 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 --  -- Thu May 10 2018 20:27:58 GMT+0545 (+0545) -- 1819.838 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 --  -- Thu May 10 2018 20:27:58 GMT+0545 (+0545) -- 1815.001 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 --  -- Thu May 10 2018 20:27:58 GMT+0545 (+0545) -- 1832.598 ms
+GET /js/materialize.js.map 404 9 --  -- Thu May 10 2018 20:27:58 GMT+0545 (+0545) -- 1616.666 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InByYW5pc2hnIiwic2NvcGUiOlsidm90ZSIsImNvbW1lbnQiLCJkZWxldGVfY29tbWVudCIsImNvbW1lbnRfb3B0aW9ucyIsImN1c3RvbV9qc29uIiwiY2xhaW1fcmV3YXJkX2JhbGFuY2UiXSwiaWF0IjoxNTI1OTYzMzg4LCJleHAiOjE1MjY1NjgxODh9.c8WmJ53Mh42FllZhb0M_iTJCquRA2aCq1EPhjlA2RbI&expires_in=604800&state=h&username=pranishg 302 46 --  -- Thu May 10 2018 20:28:11 GMT+0545 (+0545) -- 1680.332 ms
+GET /   -- pranishg -- Thu May 10 2018 20:30:11 GMT+0545 (+0545) --  ms
+GET /   -- pranishg -- Thu May 10 2018 20:32:11 GMT+0545 (+0545) --  ms
+GET / 200 10225 -- pranishg -- Thu May 10 2018 20:32:21 GMT+0545 (+0545) -- 9410.482 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 -- pranishg -- Thu May 10 2018 20:32:22 GMT+0545 (+0545) -- 1054.495 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 -- pranishg -- Thu May 10 2018 20:32:22 GMT+0545 (+0545) -- 1351.375 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 -- pranishg -- Thu May 10 2018 20:32:22 GMT+0545 (+0545) -- 1363.639 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 -- pranishg -- Thu May 10 2018 20:32:23 GMT+0545 (+0545) -- 2279.554 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 -- pranishg -- Thu May 10 2018 20:32:23 GMT+0545 (+0545) -- 2339.756 ms
+GET /js/materialize.js.map 404 9 -- pranishg -- Thu May 10 2018 20:32:23 GMT+0545 (+0545) -- 2270.238 ms
+GET / 200 10225 -- pranishg -- Thu May 10 2018 20:34:15 GMT+0545 (+0545) -- 7772.752 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 -- pranishg -- Thu May 10 2018 20:34:17 GMT+0545 (+0545) -- 1376.855 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 -- pranishg -- Thu May 10 2018 20:34:17 GMT+0545 (+0545) -- 1359.265 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 -- pranishg -- Thu May 10 2018 20:34:17 GMT+0545 (+0545) -- 1367.810 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 -- pranishg -- Thu May 10 2018 20:34:17 GMT+0545 (+0545) -- 1378.272 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 -- pranishg -- Thu May 10 2018 20:34:18 GMT+0545 (+0545) -- 2602.114 ms
+GET /logout   -- pranishg -- Thu May 10 2018 20:34:38 GMT+0545 (+0545) --  ms
+GET / 200 4940 --  -- Thu May 10 2018 20:35:29 GMT+0545 (+0545) -- 2116.767 ms
+GET /js/materialize.js.map 404 9 --  -- Thu May 10 2018 20:35:34 GMT+0545 (+0545) -- 4645.328 ms
+GET / 200 4940 --  -- Thu May 10 2018 20:35:45 GMT+0545 (+0545) -- 2144.182 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InByYW5pc2hnIiwic2NvcGUiOlsidm90ZSIsImNvbW1lbnQiLCJkZWxldGVfY29tbWVudCIsImNvbW1lbnRfb3B0aW9ucyIsImN1c3RvbV9qc29uIiwiY2xhaW1fcmV3YXJkX2JhbGFuY2UiXSwiaWF0IjoxNTI1OTYzODc2LCJleHAiOjE1MjY1Njg2NzZ9.WzwMCfqpXcjey9nJrL2mVPDDC-eKXi1pDIqp3QwO-fo&expires_in=604800&state=h&username=pranishg 302 46 --  -- Thu May 10 2018 20:36:21 GMT+0545 (+0545) -- 4008.363 ms
+GET / 200 5220 -- pranishg -- Thu May 10 2018 20:36:33 GMT+0545 (+0545) -- 11382.692 ms
+GET /js/materialize.js.map 404 9 -- pranishg -- Thu May 10 2018 20:36:47 GMT+0545 (+0545) -- 14055.939 ms
+GET / 200 5220 -- pranishg -- Thu May 10 2018 20:37:01 GMT+0545 (+0545) -- 14517.104 ms
+GET / 500 438 -- pranishg -- Thu May 10 2018 20:38:04 GMT+0545 (+0545) -- 749.042 ms
+GET / 200 5220 -- pranishg -- Thu May 10 2018 20:39:16 GMT+0545 (+0545) -- 769.502 ms
+GET /js/materialize.js.map 404 9 -- pranishg -- Thu May 10 2018 20:39:16 GMT+0545 (+0545) -- 2.476 ms
+GET / 304  -- pranishg -- Thu May 10 2018 20:39:24 GMT+0545 (+0545) -- 259.718 ms
+GET /logout 302 46 --  -- Thu May 10 2018 20:39:30 GMT+0545 (+0545) -- 1580.842 ms
+GET / 200 4940 --  -- Thu May 10 2018 20:39:31 GMT+0545 (+0545) -- 186.047 ms
+GET / 304  -- pranishg -- Thu May 10 2018 20:39:40 GMT+0545 (+0545) -- 186.347 ms
+GET /js/materialize.js.map 404 9 -- pranishg -- Thu May 10 2018 20:39:41 GMT+0545 (+0545) -- 0.921 ms
+GET / 304  --  -- Thu May 10 2018 20:39:52 GMT+0545 (+0545) -- 121.835 ms
+GET / 304  --  -- Thu May 10 2018 20:39:56 GMT+0545 (+0545) -- 318.580 ms
+GET / 304  --  -- Thu May 10 2018 20:39:59 GMT+0545 (+0545) -- 228.122 ms
+GET / 304  -- pranishg -- Thu May 10 2018 20:40:04 GMT+0545 (+0545) -- 244.315 ms
+GET /js/materialize.js.map 404 9 -- pranishg -- Thu May 10 2018 20:40:05 GMT+0545 (+0545) -- 1.070 ms
+GET /logout 302 46 --  -- Thu May 10 2018 20:41:15 GMT+0545 (+0545) -- 4118.011 ms
+GET / 200 4940 --  -- Thu May 10 2018 20:41:16 GMT+0545 (+0545) -- 784.773 ms
+GET /js/materialize.js.map 404 9 --  -- Thu May 10 2018 20:41:16 GMT+0545 (+0545) -- 2.237 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InByYW5pc2hnIiwic2NvcGUiOlsidm90ZSIsImNvbW1lbnQiLCJkZWxldGVfY29tbWVudCIsImNvbW1lbnRfb3B0aW9ucyIsImN1c3RvbV9qc29uIiwiY2xhaW1fcmV3YXJkX2JhbGFuY2UiXSwiaWF0IjoxNTI1OTY0MjA2LCJleHAiOjE1MjY1NjkwMDZ9.EOgMpoBLk0hZGZE9QV-DPl-EyqWCSrg0CiC9RWurVWY&expires_in=604800&state=h&username=pranishg 302 46 --  -- Thu May 10 2018 20:41:46 GMT+0545 (+0545) -- 1.937 ms
+GET / 304  --  -- Thu May 10 2018 20:41:46 GMT+0545 (+0545) -- 350.444 ms
+GET /js/materialize.js.map 404 9 --  -- Thu May 10 2018 20:41:47 GMT+0545 (+0545) -- 1.033 ms

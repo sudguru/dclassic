@@ -31,7 +31,7 @@ app.set('env', 'development');
 
 
 //steemconnect v2 api
-app.locals.SCapi = sc2.Initialize({
+SCapi = sc2.Initialize({
   app: 'steemporn.app',
   callbackURL: generalData.SERVER_NAME + '/connect',
   scope: ['vote', 'comment', 'delete_comment', 'comment_options', 'custom_json', 'claim_reward_balance']
@@ -83,18 +83,10 @@ app.use(function (req, res, next) {
 
 
 app.get('*', function(req, res, next){
-  req.app.locals.SCapi.me(function (error, result) {
-    if(error) {
-      req.session.username = null;
-    } else {
-      req.session.username = result.name;
-    }
     res.locals.session = req.session || null;
     next();
-  });
-  
-  
 });
+
 
 let site = require('./routes/site.routes');
 app.use('/', site);
