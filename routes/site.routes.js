@@ -71,22 +71,6 @@ router.get('/new', function(req,res) {
 
 })
 
-router.get('/subscriptions', function(req, res) {
-
-});
-
-router.get('/history', function(req, res) {
-
-});
-
-router.get('/liked', function(req, res) {
-
-});
-
-router.get('/watchlater', function(req, res) {
-
-});
-
 router.get('/video/:videotype', function(req, res) {
 
 });
@@ -100,7 +84,7 @@ const getCreated = function() {
     let duration = '';
     let pv = '';
     var query = {
-      tag: 'dpornclassicvideo',
+      tag: 'dpornclassicupload',
       limit: 10,
       filter_tags: ["test"],
       truncate_body: 1
@@ -143,7 +127,7 @@ const getHot = function() {
   const promise = new Promise(function(resolve, reject) {
     let data = [];
     var query = {
-      tag: 'dpornclassicvideo',
+      tag: 'dpornclassicupload',
       limit: 10,
       filter_tags: ["test"],
       truncate_body: 1
@@ -185,7 +169,7 @@ const getTrending = function() {
   const promise = new Promise(function(resolve, reject) {
     let data = [];
     var query = {
-      tag: 'dpornclassicvideo',
+      tag: 'dpornclassicupload',
       limit: 10,
       filter_tags: ["test"],
       truncate_body: 1

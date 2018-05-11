@@ -62,7 +62,7 @@ exports.savePost = async function(req, res, next) {
 
   videotags.push('nsfw');
   videotags.push('dpornclassic');
-  videotags.push('dpornclassicvideo');
+  videotags.push('dpornclassicupload');
 
   var jsonMetadata = {
     tags: videotags,
