@@ -3,23 +3,20 @@ const path = require('path');
 const fs = require('fs');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const flash = require('connect-flash');
-const session = require('express-session');
-const MongoStore = require('connect-mongo')(session);
 const morgan = require('morgan');
 const sc2 = require('sc2-sdk');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 const config = require('./config/database');
 const generalData = require('./config/generalData');
 
 mongoose.connect(config.database);
 let db = mongoose.connection;
 
-// Check connection
+// Check DB connection & Error 
 db.once('open', function(){
   console.log('Connected to MongoDB');
 });
-
-// Check for DB errors
 db.on('error', function(err){
   console.log(err);
 });
@@ -27,8 +24,6 @@ db.on('error', function(err){
 // Init App
 const app = express();
 app.set('env', 'development');
-
-
 
 //steemconnect v2 api
 SCapi = sc2.Initialize({
@@ -41,8 +36,7 @@ SCapi = sc2.Initialize({
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-// Body Parser Middleware
-// parse application/x-www-form-urlencoded
+// Body Parser parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
@@ -59,6 +53,7 @@ app.use(session({
   cookie: { expires: 604800 }
 }));
 
+
 //Morgan Logging
 var accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs/access.log'), {flags: 'a'})
 app.use(morgan(function (tokens, req, res) {
@@ -67,26 +62,18 @@ app.use(morgan(function (tokens, req, res) {
     tokens.url(req, res),
     tokens.status(req, res),
     tokens.res(req, res, 'content-length'), '--',
-    req.session.username , '--',
+    'username' , '--',
     new Date() , '--',
     tokens['response-time'](req, res), 'ms'
   ].join(' ')
 }, {stream: accessLogStream}));
 
-// Express Messages Middleware
-app.use(require('connect-flash')());
-app.use(function (req, res, next) {
-  res.locals.messages = require('express-messages')(req, res);
-  next();
-});
-
-
-
 app.get('*', function(req, res, next){
-    res.locals.session = req.session || null;
+    res.locals.username = req.session.username || null;
+    console.log('s', res.locals.username)
+    console.log('q', req.session.username);
     next();
 });
-
 
 let site = require('./routes/site.routes');
 app.use('/', site);
@@ -105,11 +92,26 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
   // render the error page
   res.status(err.status || 500);
   res.send(err.message);
 });
 
-
+function ensureAuthenticated(req, res, next){
+  let username = localStorage.getItem('dpc_username');
+  let expirationTimestamp = localStorage.getItem('dpc_expiration');
+  let currentTimestamp = moment(new Date()).format('X');
+  let validUser = (currentTimestamp > expirationTimestamp) ? true : false;
+  if(validUser){
+    if(generalData.usersAllowedToUpload.indexOf(username) >= 0 )
+    {
+      return next();
+    } else {
+      res.redirect('/?msg=Sorry You are not Authorized to upload.');
+    }
+  } else {
+    redirectPath = req.path;
+    res.redirect('/login?state='+redirectPath);
+  }
+}
 module.exports = app;

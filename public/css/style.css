@@ -200,3 +200,4 @@ input[type=text]:not(.browser-default):focus:not([readonly]) {
 #modalLoading:focus {
     outline: none;
 }
+

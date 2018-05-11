@@ -3,19 +3,18 @@ const path = require('path');
 const generalData = require('../config/generalData');
 // Video Model
 let Video = require('../models/video.model');
-
+_this = this
+selectedFileName = '';
 
 const storage = multer.diskStorage({
   destination: './public/uploads/',
   filename: function(req, file, cb){
     if(path.extname(file.originalname) == ".mp4") {
-      req.session.filename = file.fieldname + '-' + Date.now() + path.extname(file.originalname);
-      cb(null,file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+      selectedFileName= file.fieldname + '-' + Date.now() + path.extname(file.originalname);   
     } else {
-      req.session.filename = file.fieldname + '-' + Date.now() + '.jpg';
-      cb(null,file.fieldname + '-' + Date.now() + '.jpg');
+      selectedFileName = file.fieldname + '-' + Date.now() + '.jpg';
     }
-    
+    cb(null,selectedFileName);
   }
 });
 
@@ -24,17 +23,10 @@ const storage = multer.diskStorage({
 const upload = multer({
   storage: storage,
   limits:{fileSize: 1000000000},
-  // fileFilter: function(req, file, cb){
-  //   checkFileType(file, cb);
-  // }
 }).fields([
   { name: 'myFile', maxCount: 1 },
   { name: 'myThumb', maxCount: 1 }
 ]);
-
-
-_this = this
-
 
 
 
@@ -47,7 +39,7 @@ exports.uploadVideo = function(req, res, next) {
     if(err){
       res.status(500).send('Some Error Occured at Server');
     } else {
-      res.send(req.session.filename);    
+      res.send(selectedFileName);    
     }
   });
 }
@@ -125,7 +117,7 @@ exports.savePost = async function(req, res, next) {
   };
 
   //, ['comment_options', comment_options_params]
-  req.app.locals.SCapi.broadcast([['comment', comment_params], ['comment_options', comment_options_params]], function (err, result) {
+  SCapi.broadcast([['comment', comment_params], ['comment_options', comment_options_params]], function (err, result) {
     if(err) {
       console.log(err);
       res.status(500).json({ error: 'steem error'});

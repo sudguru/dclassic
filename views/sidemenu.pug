@@ -3,16 +3,16 @@ ul#slide-out.sidenav
     .user-view
       .background
         img(src='/imgs/darkbg.png')
-      if !session.username
+      if !username
         a(href='#')
           img.circle(src='/imgs/profile.png')
         a.white-text(href='/login?state=index')
           | Login
       else 
-        a(href='/profile/'+session.username)
-          img.circle(src='https://img.busy.org/@'+session.username)
         a(href='/profile/'+username)
-          span.white-text.name= session.username
+          img.circle(src='https://img.busy.org/@'+username)
+        a(href='/profile/'+username)
+          span.white-text.name= username
           br
   li
     a.waves-effect.sidenav-close(href='/')

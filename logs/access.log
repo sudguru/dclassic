@@ -874,3 +874,98 @@ GET /js/materialize.js.map 404 9 --  -- Thu May 10 2018 20:41:16 GMT+0545 (+0545
 GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InByYW5pc2hnIiwic2NvcGUiOlsidm90ZSIsImNvbW1lbnQiLCJkZWxldGVfY29tbWVudCIsImNvbW1lbnRfb3B0aW9ucyIsImN1c3RvbV9qc29uIiwiY2xhaW1fcmV3YXJkX2JhbGFuY2UiXSwiaWF0IjoxNTI1OTY0MjA2LCJleHAiOjE1MjY1NjkwMDZ9.EOgMpoBLk0hZGZE9QV-DPl-EyqWCSrg0CiC9RWurVWY&expires_in=604800&state=h&username=pranishg 302 46 --  -- Thu May 10 2018 20:41:46 GMT+0545 (+0545) -- 1.937 ms
 GET / 304  --  -- Thu May 10 2018 20:41:46 GMT+0545 (+0545) -- 350.444 ms
 GET /js/materialize.js.map 404 9 --  -- Thu May 10 2018 20:41:47 GMT+0545 (+0545) -- 1.033 ms
+GET / 500 282 --  -- Fri May 11 2018 08:29:03 GMT+0545 (+0545) -- 2793.525 ms
+GET /favicon.ico 404 9 --  -- Fri May 11 2018 08:29:03 GMT+0545 (+0545) -- 0.515 ms
+GET / 500 282 --  -- Fri May 11 2018 08:29:58 GMT+0545 (+0545) -- 1240.803 ms
+GET / 200 5655 --  -- Fri May 11 2018 08:30:34 GMT+0545 (+0545) -- 1624.232 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 --  -- Fri May 11 2018 08:30:35 GMT+0545 (+0545) -- 0.641 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 --  -- Fri May 11 2018 08:30:35 GMT+0545 (+0545) -- 0.491 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 --  -- Fri May 11 2018 08:30:35 GMT+0545 (+0545) -- 0.344 ms
+GET /js/materialize.js.map 404 9 --  -- Fri May 11 2018 08:30:35 GMT+0545 (+0545) -- 0.343 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 --  -- Fri May 11 2018 08:30:35 GMT+0545 (+0545) -- 0.319 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 --  -- Fri May 11 2018 08:30:35 GMT+0545 (+0545) -- 0.272 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 --  -- Fri May 11 2018 08:30:35 GMT+0545 (+0545) -- 0.292 ms
+GET / 200 4940 --  -- Fri May 11 2018 08:35:14 GMT+0545 (+0545) -- 548.450 ms
+GET /js/materialize.js.map 404 9 --  -- Fri May 11 2018 08:35:14 GMT+0545 (+0545) -- 1.266 ms
+GET / 500 282 --  -- Fri May 11 2018 08:35:51 GMT+0545 (+0545) -- 1686.630 ms
+GET / 500 282 --  -- Fri May 11 2018 08:38:57 GMT+0545 (+0545) -- 1623.709 ms
+GET / 500 282 --  -- Fri May 11 2018 08:39:47 GMT+0545 (+0545) -- 1574.255 ms
+GET / 500 282 --  -- Fri May 11 2018 08:40:15 GMT+0545 (+0545) -- 1761.011 ms
+GET / 500 282 --  -- Fri May 11 2018 08:40:54 GMT+0545 (+0545) -- 1663.512 ms
+GET / 500 282 --  -- Fri May 11 2018 08:41:13 GMT+0545 (+0545) -- 1685.497 ms
+GET / 500 287 --  -- Fri May 11 2018 08:42:31 GMT+0545 (+0545) -- 1718.247 ms
+GET / 500 287 --  -- Fri May 11 2018 08:44:17 GMT+0545 (+0545) -- 1633.015 ms
+GET / 500 287 --  -- Fri May 11 2018 08:44:38 GMT+0545 (+0545) -- 1667.736 ms
+GET / 500 287 --  -- Fri May 11 2018 08:45:19 GMT+0545 (+0545) -- 1721.381 ms
+GET / 500 287 --  -- Fri May 11 2018 08:51:44 GMT+0545 (+0545) -- 1737.101 ms
+GET / 200 4940 --  -- Fri May 11 2018 08:55:44 GMT+0545 (+0545) -- 576.777 ms
+GET /js/materialize.js.map 404 9 --  -- Fri May 11 2018 08:55:45 GMT+0545 (+0545) -- 1.159 ms
+GET / 304  --  -- Fri May 11 2018 08:56:56 GMT+0545 (+0545) -- 569.172 ms
+GET /js/materialize.js.map 404 9 --  -- Fri May 11 2018 08:56:57 GMT+0545 (+0545) -- 1.124 ms
+GET / 304  --  -- Fri May 11 2018 08:57:34 GMT+0545 (+0545) -- 570.044 ms
+GET /js/materialize.js.map 404 9 --  -- Fri May 11 2018 08:57:35 GMT+0545 (+0545) -- 1.009 ms
+GET / 304  --  -- Fri May 11 2018 08:59:53 GMT+0545 (+0545) -- 563.164 ms
+GET /js/materialize.js.map 404 9 --  -- Fri May 11 2018 08:59:53 GMT+0545 (+0545) -- 1.310 ms
+GET / 304  --  -- Fri May 11 2018 09:00:21 GMT+0545 (+0545) -- 567.651 ms
+GET /js/materialize.js.map 404 9 --  -- Fri May 11 2018 09:00:21 GMT+0545 (+0545) -- 1.030 ms
+GET / 304  --  -- Fri May 11 2018 09:07:56 GMT+0545 (+0545) -- 3235.097 ms
+GET /js/materialize.js.map 404 9 --  -- Fri May 11 2018 09:07:56 GMT+0545 (+0545) -- 2.820 ms
+GET / 200 9925 --  -- Fri May 11 2018 09:11:45 GMT+0545 (+0545) -- 3126.727 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 --  -- Fri May 11 2018 09:11:45 GMT+0545 (+0545) -- 1.196 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 --  -- Fri May 11 2018 09:11:45 GMT+0545 (+0545) -- 0.535 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 --  -- Fri May 11 2018 09:11:45 GMT+0545 (+0545) -- 0.314 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 --  -- Fri May 11 2018 09:11:45 GMT+0545 (+0545) -- 0.232 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 --  -- Fri May 11 2018 09:11:45 GMT+0545 (+0545) -- 0.279 ms
+GET /js/materialize.js.map 404 9 --  -- Fri May 11 2018 09:11:45 GMT+0545 (+0545) -- 0.289 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 --  -- Fri May 11 2018 09:11:45 GMT+0545 (+0545) -- 0.306 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 --  -- Fri May 11 2018 09:11:45 GMT+0545 (+0545) -- 0.226 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 --  -- Fri May 11 2018 09:11:45 GMT+0545 (+0545) -- 0.273 ms
+GET /uploads/myThumb-1525950829733.jpg 404 9 --  -- Fri May 11 2018 09:12:06 GMT+0545 (+0545) -- 0.252 ms
+GET /uploads/myThumb-1525926197601.jpg 404 9 --  -- Fri May 11 2018 09:12:06 GMT+0545 (+0545) -- 0.298 ms
+GET /uploads/myThumb-1525633887094.jpg 404 9 --  -- Fri May 11 2018 09:12:06 GMT+0545 (+0545) -- 0.250 ms
+GET /uploads/myThumb-1525951392773.jpg 404 9 --  -- Fri May 11 2018 09:12:06 GMT+0545 (+0545) -- 0.388 ms
+GET /uploads/myThumb-1525929381243.jpg 404 9 --  -- Fri May 11 2018 09:12:06 GMT+0545 (+0545) -- 0.318 ms
+GET / 200 4940 --  -- Fri May 11 2018 09:13:01 GMT+0545 (+0545) -- 549.038 ms
+GET / 200 5669 -- username -- Fri May 11 2018 09:30:29 GMT+0545 (+0545) -- 538.993 ms
+GET /login?state=h 301  -- username -- Fri May 11 2018 09:30:33 GMT+0545 (+0545) -- 0.732 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTAzNDQsImV4cCI6MTUyNjYxNTE0NH0.vAtsYZnXXBpZ6LdiAQjWDsTE2mXN90zq_PDgzgSmy-Q&expires_in=604800&state=h&username=sudguru   -- username -- Fri May 11 2018 09:31:02 GMT+0545 (+0545) --  ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTAzODIsImV4cCI6MTUyNjYxNTE4Mn0.PRSPvNfbwf_-unKN2bePshtK5Z6xqpLVJIBFc76TVQY&expires_in=604800&state=h&username=sudguru 200  -- username -- Fri May 11 2018 09:31:22 GMT+0545 (+0545) -- 2.256 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTAzODIsImV4cCI6MTUyNjYxNTE4Mn0.PRSPvNfbwf_-unKN2bePshtK5Z6xqpLVJIBFc76TVQY&expires_in=604800&state=h&username=sudguru 500 25 -- username -- Fri May 11 2018 09:37:11 GMT+0545 (+0545) -- 5.538 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTAzODIsImV4cCI6MTUyNjYxNTE4Mn0.PRSPvNfbwf_-unKN2bePshtK5Z6xqpLVJIBFc76TVQY&expires_in=604800&state=h&username=sudguru 200  -- username -- Fri May 11 2018 09:37:29 GMT+0545 (+0545) -- 3.865 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTAzODIsImV4cCI6MTUyNjYxNTE4Mn0.PRSPvNfbwf_-unKN2bePshtK5Z6xqpLVJIBFc76TVQY&expires_in=604800&state=h&username=sudguru 200  -- username -- Fri May 11 2018 09:39:07 GMT+0545 (+0545) -- 2.488 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTAzODIsImV4cCI6MTUyNjYxNTE4Mn0.PRSPvNfbwf_-unKN2bePshtK5Z6xqpLVJIBFc76TVQY&expires_in=604800&state=h&username=sudguru 200  -- username -- Fri May 11 2018 09:39:16 GMT+0545 (+0545) -- 0.588 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTAzODIsImV4cCI6MTUyNjYxNTE4Mn0.PRSPvNfbwf_-unKN2bePshtK5Z6xqpLVJIBFc76TVQY&expires_in=604800&state=h&username=sudguru 200  -- username -- Fri May 11 2018 09:40:00 GMT+0545 (+0545) -- 3.072 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTAzODIsImV4cCI6MTUyNjYxNTE4Mn0.PRSPvNfbwf_-unKN2bePshtK5Z6xqpLVJIBFc76TVQY&expires_in=604800&state=h&username=sudguru 200  -- username -- Fri May 11 2018 09:40:03 GMT+0545 (+0545) -- 0.647 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTAzODIsImV4cCI6MTUyNjYxNTE4Mn0.PRSPvNfbwf_-unKN2bePshtK5Z6xqpLVJIBFc76TVQY&expires_in=604800&state=h&username=sudguru 200  -- username -- Fri May 11 2018 09:40:13 GMT+0545 (+0545) -- 0.502 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTAzODIsImV4cCI6MTUyNjYxNTE4Mn0.PRSPvNfbwf_-unKN2bePshtK5Z6xqpLVJIBFc76TVQY&expires_in=604800&state=h&username=sudguru 200  -- username -- Fri May 11 2018 09:43:33 GMT+0545 (+0545) -- 2.931 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTAzODIsImV4cCI6MTUyNjYxNTE4Mn0.PRSPvNfbwf_-unKN2bePshtK5Z6xqpLVJIBFc76TVQY&expires_in=604800&state=h&username=sudguru 500 19 -- username -- Fri May 11 2018 09:45:07 GMT+0545 (+0545) -- 5.242 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTAzODIsImV4cCI6MTUyNjYxNTE4Mn0.PRSPvNfbwf_-unKN2bePshtK5Z6xqpLVJIBFc76TVQY&expires_in=604800&state=h&username=sudguru 200  -- username -- Fri May 11 2018 09:45:25 GMT+0545 (+0545) -- 4.182 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTAzODIsImV4cCI6MTUyNjYxNTE4Mn0.PRSPvNfbwf_-unKN2bePshtK5Z6xqpLVJIBFc76TVQY&expires_in=604800&state=h&username=sudguru 200  -- username -- Fri May 11 2018 10:04:36 GMT+0545 (+0545) -- 7.760 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTAzODIsImV4cCI6MTUyNjYxNTE4Mn0.PRSPvNfbwf_-unKN2bePshtK5Z6xqpLVJIBFc76TVQY&expires_in=604800&state=h&username=sudguru 200  -- username -- Fri May 11 2018 10:05:20 GMT+0545 (+0545) -- 7.381 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTAzODIsImV4cCI6MTUyNjYxNTE4Mn0.PRSPvNfbwf_-unKN2bePshtK5Z6xqpLVJIBFc76TVQY&expires_in=604800&state=h&username=sudguru 200  -- username -- Fri May 11 2018 10:05:45 GMT+0545 (+0545) -- 6.302 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTAzODIsImV4cCI6MTUyNjYxNTE4Mn0.PRSPvNfbwf_-unKN2bePshtK5Z6xqpLVJIBFc76TVQY&expires_in=604800&state=h&username=sudguru 200  -- username -- Fri May 11 2018 10:29:52 GMT+0545 (+0545) -- 6.976 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTUwMTQsImV4cCI6MTUyNjYxOTgxNH0.l1DSUweY9s_7kll5ZMutWwyMOcq0qztUQLv_kRE_ogg&expires_in=604800&state=h&username=sudguru 500 27 -- username -- Fri May 11 2018 10:48:34 GMT+0545 (+0545) -- 3.819 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTUwMTQsImV4cCI6MTUyNjYxOTgxNH0.l1DSUweY9s_7kll5ZMutWwyMOcq0qztUQLv_kRE_ogg&expires_in=604800&state=h&username=sudguru 500 27 -- username -- Fri May 11 2018 10:57:39 GMT+0545 (+0545) -- 3.834 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTUwMTQsImV4cCI6MTUyNjYxOTgxNH0.l1DSUweY9s_7kll5ZMutWwyMOcq0qztUQLv_kRE_ogg&expires_in=604800&state=h&username=sudguru 500 27 -- username -- Fri May 11 2018 10:57:46 GMT+0545 (+0545) -- 0.459 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTU1OTQsImV4cCI6MTUyNjYyMDM5NH0.59wfi7xuPfMcEC38eg4cxfW9B-5xap7uqJclUio6D1A&expires_in=604800&state=h&username=sudguru 500 27 -- username -- Fri May 11 2018 10:58:14 GMT+0545 (+0545) -- 4.211 ms
+GET / 500 27 -- username -- Fri May 11 2018 10:58:59 GMT+0545 (+0545) -- 4.737 ms
+GET / 500 22 -- username -- Fri May 11 2018 11:50:20 GMT+0545 (+0545) -- 4.508 ms
+GET / 200 5356 -- username -- Fri May 11 2018 11:51:20 GMT+0545 (+0545) -- 1739.490 ms
+GET / 200 5364 -- username -- Fri May 11 2018 11:53:27 GMT+0545 (+0545) -- 2042.371 ms
+GET /login?state=index 301  -- username -- Fri May 11 2018 11:53:31 GMT+0545 (+0545) -- 0.890 ms
+GET / 304  -- username -- Fri May 11 2018 11:53:39 GMT+0545 (+0545) -- 225.341 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTg5MTgsImV4cCI6MTUyNjYyMzcxOH0.jBm8TEAl4aqLlgVy3yrNrZXzkynvhkUI49fCh-9jkJo&expires_in=604800&state=index&username=sudguru 302 46 -- username -- Fri May 11 2018 11:53:39 GMT+0545 (+0545) -- 12.149 ms
+GET / 200 5627 -- username -- Fri May 11 2018 11:54:53 GMT+0545 (+0545) -- 1785.123 ms
+GET /logout 302 46 -- username -- Fri May 11 2018 11:55:17 GMT+0545 (+0545) -- 2099.054 ms
+GET / 304  -- username -- Fri May 11 2018 11:55:17 GMT+0545 (+0545) -- 246.897 ms
+GET / 304  -- username -- Fri May 11 2018 11:56:12 GMT+0545 (+0545) -- 571.412 ms
+GET /logout 302 46 -- username -- Fri May 11 2018 11:56:18 GMT+0545 (+0545) -- 1281.609 ms
+GET / 200 5364 -- username -- Fri May 11 2018 11:56:18 GMT+0545 (+0545) -- 238.277 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTkwODksImV4cCI6MTUyNjYyMzg4OX0.DMHR0gh2zfU6HXmbbN9KVLGbxog5lNYKtS-L6LX-70Y&expires_in=604800&state=index&username=sudguru 302 46 -- username -- Fri May 11 2018 11:56:29 GMT+0545 (+0545) -- 3.820 ms
+GET / 200 5627 -- username -- Fri May 11 2018 11:56:29 GMT+0545 (+0545) -- 178.264 ms
+GET /logout 302 46 -- username -- Fri May 11 2018 11:56:37 GMT+0545 (+0545) -- 1530.048 ms
+GET / 200 5364 -- username -- Fri May 11 2018 11:56:37 GMT+0545 (+0545) -- 120.120 ms
+GET /connect?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYwMTkxMDYsImV4cCI6MTUyNjYyMzkwNn0.JQD38jFLs801z6g-xjtyk8sCOEprYmDDCkzILcJObOc&expires_in=604800&state=index&username=sudguru 302 46 -- username -- Fri May 11 2018 11:56:46 GMT+0545 (+0545) -- 1.303 ms
+GET / 200 5627 -- username -- Fri May 11 2018 11:56:46 GMT+0545 (+0545) -- 132.324 ms
+GET /logout 302 46 -- username -- Fri May 11 2018 11:59:53 GMT+0545 (+0545) -- 1244.663 ms
+GET / 200 5364 -- username -- Fri May 11 2018 11:59:54 GMT+0545 (+0545) -- 172.791 ms

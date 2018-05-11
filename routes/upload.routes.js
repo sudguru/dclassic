@@ -13,9 +13,8 @@ router.post('/save', ensureAuthenticated, UploadController.savePost);
 
 // Access Control
 function ensureAuthenticated(req, res, next){
-  //const allowed = ['sudguru', 'pranishg'];
   const allowed = generalData.usersAllowedToUpload
-  console.log(allowed);
+
   if(req.session.username){
     if(allowed.indexOf(req.session.username)>=0)
     {
