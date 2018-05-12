@@ -77,7 +77,7 @@ exports.savePost = async function(req, res, next) {
     app: 'steemporn.app'
   }
   //const jsonMetadata = {};
-  //console.log(jsonMetadata);
+  console.log(jsonMetadata);
 
   let p_s_d = 10000;
   if (videoPost.power_up === 50) {
