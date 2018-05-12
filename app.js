@@ -20,11 +20,15 @@ db.once('open', function(){
 db.on('error', function(err){
   console.log(err);
 });
+const myCronJob = require('./myCronJob');
+var CronJob = require('cron').CronJob;
+new CronJob('*/2 * * * *', myCronJob, null, true, 'America/Los_Angeles');
+
+
 
 // Init App
 const app = express();
 app.set('env', 'development');
-
 //steemconnect v2 api
 SCapi = sc2.Initialize({
   app: 'steemporn.app',
