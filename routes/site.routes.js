@@ -30,11 +30,17 @@ router.get('/profile/:author', function(req, res) {
   const author = req.params.author;
   steem.api.getAccounts([author], function(err, response){
     voting_power = response[0].voting_power;
-    cover_image = `https://steemitimages.com/2048x512/${response[0].json_metadata.cover_image}`
+    cover_image = `https://steemitimages.com/2048x512/${response[0].json_metadata.profile.cover_image}`
+    about = response[0].json_metadata.profile.about;
+    profile_image = response[0].json_metadata.profile.profile_image
+    location = response[0].json_metadata.profile.location
     res.render("profile", { 
       author: author,
       cover_image: cover_image,
-      voting_power: voting_power
+      voting_power: voting_power,
+      location: location,
+      profile_image: profile_image,
+      about: about
     });
   });
 
