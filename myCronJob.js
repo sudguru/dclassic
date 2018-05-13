@@ -99,12 +99,11 @@ const manageTrending = function() {
           }
           modifiedtrendings.push(item);
       });
-      console.log(modifiedtrendings);
       Trending.collection.insert(modifiedtrendings, function (err, docs) {
         if (err){ 
           logError(err, 'Cron Trending Insert to mongo 105')
         } else {
-          deleteUnwanted('trendings', trendings);
+          //deleteUnwanted('trendings', trendings);
         }
       });
     } else {
@@ -157,7 +156,7 @@ const manageHot = function() {
         if (err){ 
           logError(err, 'Cron Hot insert to mongo 158')
         } else {
-          deleteUnwanted('hots', hots);
+          //deleteUnwanted('hots', hots);
         }
       });
     } else {

@@ -5,6 +5,20 @@ const steem = require('steem');
 const moment = require("moment");
 
 
+
+router.post('/upvote/:username/:author/:permlink', ensureAuthenticated, function(req, res) {
+  let voter = req.params.username;
+  let author = req.params.author;
+  SCapi.vote(voter, author, permlink, 10000, function (err, res) {
+    if(err) {
+      console.log(err);
+    } else {
+      res.status(200).json({ result: 'success'});
+    }
+  });
+  
+
+});
 router.get('/subscriptions', ensureAuthenticated, function(req, res) {
 
 });
