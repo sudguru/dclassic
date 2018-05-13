@@ -17,7 +17,7 @@
         url: '/private/upvote/'+username+'/'+author+'/'+permlink,
         dataType: "json",
         success: (res) => {
-            console.log('hello');
+            $('ul#dropdown1').append(`<li>${res.result}</li>`);
             $('#votecount').html(parseInt(votes)+1);
         },
         error: (err) => {

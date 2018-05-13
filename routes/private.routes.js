@@ -14,7 +14,7 @@ router.post('/upvote/:username/:author/:permlink', ensureAuthenticated, function
     if(err) {
       console.log(err);
     } else {
-      res.status(200).json({ result: 'success'});
+      res.status(200).json({ result: voter});
     }
   });
   
