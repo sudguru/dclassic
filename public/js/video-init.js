@@ -2,7 +2,8 @@
   $(function(){
     $('.dropdown-trigger').dropdown({
         hover: true,
-        alignment: 'right'
+        alignment: 'right',
+        coverTrigger: false
     });
 
     $('.upvote').on('click', function() {
