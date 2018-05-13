@@ -103,7 +103,7 @@ const manageTrending = function() {
         if (err){ 
           logError(err, 'Cron Trending Insert to mongo 105')
         } else {
-          //deleteUnwanted('trendings', trendings);
+          deleteUnwanted('trendings', trendings);
         }
       });
     } else {
@@ -156,7 +156,7 @@ const manageHot = function() {
         if (err){ 
           logError(err, 'Cron Hot insert to mongo 158')
         } else {
-          //deleteUnwanted('hots', hots);
+          deleteUnwanted('hots', hots);
         }
       });
     } else {
@@ -168,7 +168,7 @@ const manageHot = function() {
 };
 
 const deleteUnwanted = function(task, data) {
-  if(task = 'trendings')
+  if(task === 'trendings')
   {
     data.forEach( trending => {
       var found = mongovideos.find(v => v.permlink === trending.permlink);
