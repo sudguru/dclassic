@@ -63,8 +63,35 @@ router.get('/video/:permlink/:author', function(req, res) {
     res.render('video', { video, voters, tags });
   });
 });
-router.get('/hot', function(req,res) {
 
+
+router.get('/hot', function(req,res) {
+  var query = {
+    limit: 50,
+  };
+  Hot.find({}, function(err, videos){
+    if(err){
+      logError(err, 'Site hot find 120');
+    } else {
+      //tasks
+      hot = videos.map(video => {
+        posted = moment(video.posteddate).fromNow();
+        duration = moment.utc(video.video_duration*1000).format('mm:ss');
+        const v = {
+          title: video.title,
+          thumbnail : generalData.SERVER_NAME + '/uploads/' + video.thumbnail_path,
+          videopath : generalData.SERVER_NAME + '/uploads/' + video.video_path,
+          duration: duration,
+          author: video.author,
+          payment: '$ ' + video.payment,
+          posted: posted,
+          permlink: video.permlink
+        }
+        return v;
+      });
+      res.render('hottrendingnew', { title: "Hot Videos", videos: hot })
+    }
+  });
 });
 
 router.get('/trending', function(req,res) {
