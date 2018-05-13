@@ -3,9 +3,10 @@ block headCSS
 
 block content
   section
-    .row
-      .col.s12.m12.l12.xl12(style=`background-image: url(${cover_image}; background-repeat-none; min-height: 200px`)
-        .text-center= author
+    .row.mt-5
+      .col.s12.m12.l12.xl12(style=`background-image: url(${cover_image}); background-repeat: no-repeat; background-size: cover; background-position: center;  min-height: 200px`)
+        h2.center-align.white-text= author
+        a.btn#follow.white.btn-small.red-text.right(href='#') Follow
     .row.margin-vertical-15
       .col.s12
         ul.tabs
@@ -13,8 +14,37 @@ block content
             a.active(href='#profile') Profile
           li.tab.col.s6
             a(href='#videos') Videos
-      #profile.col.s12 Test 1
-      #videos.col.s12= voting_power
+        #profile.tabcontent.col.s12
+          .row
+            .col.s12.m12.l8.xl8
+              h6 About:
+              | #{about}
+            .col.s12.m12.l4.xl4
+              h6 Voting Power:
+              | #{voting_power}
+              h6 Steem Balance:
+              | #{balance}
+              h6 SBD Balance:
+              | #{sbd_balance}
+              h6 Followers:
+              | #{follower_count}
+              h6 Following:
+              | #{following_count}
+        #videos.tabcontent.col.s12
+          .row.margin-vertical-15
+            each video in videos
+              .col.s12.m6.l3.xl3
+                .card.hoverable
+                  .card-image
+                    img(src=video.thumbnail)
+                    span.new.badge.grey.darken-3(data-badge-caption="")= video.duration
+                  .card-content= video.title
+                    br
+                    a.small.grey-text.darken-1(href='#')= video.author
+                  .card-action
+                    .badge.grey.lighten-2.left= video.payment
+                    .badge.right.small= video.posted
+                    div(style='clear: both')
 
           
       

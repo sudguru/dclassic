@@ -28,20 +28,64 @@ router.get('/category/:categoryname', function(req, res) {
 
 router.get('/profile/:author', function(req, res) {
   const author = req.params.author;
+  av = [];
+  Video.find({"author": author}, function(err, videos){
+    if(err){
+      logError(err, 'Site author video find 38');
+    } else {
+      //tasks
+      av = videos.map(video => {
+        posted = moment(video.posteddate).fromNow();
+        duration = moment.utc(video.video_duration*1000).format('mm:ss');
+        const v = {
+          title: video.title,
+          thumbnail : generalData.SERVER_NAME + '/uploads/' + video.thumbnail_path,
+          videopath : generalData.SERVER_NAME + '/uploads/' + video.video_path,
+          duration: duration,
+          author: video.author,
+          payment: '$ ' + video.payment,
+          posted: posted,
+          permlink: video.permlink
+        }
+        return v;
+      });
+    }
+  });
+
   steem.api.getAccounts([author], function(err, response){
     voting_power = response[0].voting_power;
-    cover_image = `https://steemitimages.com/2048x512/${response[0].json_metadata.profile.cover_image}`
-    about = response[0].json_metadata.profile.about;
-    profile_image = response[0].json_metadata.profile.profile_image
-    location = response[0].json_metadata.profile.location
-    res.render("profile", { 
-      author: author,
-      cover_image: cover_image,
-      voting_power: voting_power,
-      location: location,
-      profile_image: profile_image,
-      about: about
+    cover_image='/imgs/cover.jpg';
+    about = '';
+    profile_image = 'https://img.busy.org/@'+author;
+    location = '';
+    if(response[0].json_metadata) {
+      json_metadata = JSON.parse(response[0].json_metadata);
+      console.log(json_metadata);
+      cover_image = `https://steemitimages.com/2048x512/${json_metadata.profile.cover_image}`
+      about = json_metadata.profile.about;
+      profile_image = json_metadata.profile.profile_image;
+      location = json_metadata.profile.location
+    }
+    balance = response[0].balance;
+    sbd_balance = response[0].sbd_balance;
+    steem.api.getFollowCount(author, function(err1, result) {
+      
+      res.render("profile", { 
+        author: author,
+        cover_image: cover_image,
+        voting_power: voting_power,
+        location: location,
+        profile_image: profile_image,
+        about: about,
+        videos: av,
+        follower_count: result.follower_count,
+        following_count: result.following_count,
+        balance: balance,
+        sbd_balance: sbd_balance
+
+      });
     });
+    
   });
 
   
@@ -83,9 +127,7 @@ router.get('/video/:permlink/:author', function(req, res) {
 
 
 router.get('/hot', function(req,res) {
-  var query = {
-    limit: 50,
-  };
+
   Hot.find({}, function(err, videos){
     if(err){
       logError(err, 'Site hot find 120');

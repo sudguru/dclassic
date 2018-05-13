@@ -211,3 +211,11 @@ input[type=text]:not(.browser-default):focus:not([readonly]) {
     outline: none;
 }
 
+.tabcontent {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #eee;
+    min-height: 300px;
+    height: 300px;
+    margin: 0 50px;
+}
