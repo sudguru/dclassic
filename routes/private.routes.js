@@ -21,11 +21,11 @@ router.post('/upvote/:username/:author/:permlink', ensureAuthenticated, function
 
 });
 router.get('/subscriptions', ensureAuthenticated, function(req, res) {
-
+  res.render('subscriptions');
 });
 
 router.get('/history', ensureAuthenticated, function(req, res) {
-
+  
 });
 
 router.get('/liked', ensureAuthenticated, function(req, res) {

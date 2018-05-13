@@ -89,7 +89,7 @@ router.get('/hot', function(req,res) {
         }
         return v;
       });
-      res.render('hottrendingnew', { title: "Hot Videos", videos: hot })
+      res.render('listing', { title: "Hot Videos", videos: hot })
     }
   });
 });
@@ -118,7 +118,7 @@ router.get('/trending', function(req,res) {
         }
         return v;
       });
-      res.render('hottrendingnew', { title: "Trending Videos", videos: trending })
+      res.render('listing', { title: "Trending Videos", videos: trending })
     }
   });
 });
@@ -148,7 +148,7 @@ router.get('/new', function(req,res) {
         }
         return v;
       });
-      res.render('hottrendingnew', { title: "New Videos", videos: latests })
+      res.render('listing', { title: "New Videos", videos: latests })
     }
   });
 })
