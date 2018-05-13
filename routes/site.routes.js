@@ -54,7 +54,9 @@ router.get('/video/:permlink/:author', function(req, res) {
     }
     let voters = [];
     result.active_votes.forEach(ac => {
-      voters.push(ac.voter);
+      if(ac.percent > 0) {
+        voters.push(ac.voter);
+      }
     })
     console.log(voters)
     tags = json_metadata.video.categories.split(",");
