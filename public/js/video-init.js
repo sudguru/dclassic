@@ -16,6 +16,7 @@
         url: '/upvote/'+username+'/'+author+'/'+permlink,
         dataType: "json",
         success: (res) => {
+            console.log('hello');
             $('#votecount').html(parseInt(votes)+1);
         },
         error: (err) => {
