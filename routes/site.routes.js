@@ -31,6 +31,7 @@ router.get('/profile/:author', function(req, res) {
   let voting_power;
   steem.api.getAccounts([author], function(err, response){
     voting_power = response.voting_power;
+    console.log(voting_power);
     res.render("profile", { 
       cover_image: 'abc',
       voting_power: voting_power
