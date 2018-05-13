@@ -13,7 +13,7 @@
       var votes = $(this).data('votes');
       $.ajax({
         type: 'POST',
-        url: '/upvote/'+username+'/'+author+'/'+permlink,
+        url: '/private/upvote/'+username+'/'+author+'/'+permlink,
         dataType: "json",
         success: (res) => {
             console.log('hello');
