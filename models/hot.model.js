@@ -1,7 +1,7 @@
 let mongoose = require('mongoose');
 
 // Video Schema
-let videoSchema = mongoose.Schema({
+let hotSchema = mongoose.Schema({
   title: { type: String, required: true },
   permlink: { type: String, required: true },
   author: { type: String, required: true },
@@ -16,5 +16,5 @@ let videoSchema = mongoose.Schema({
   payment: { type: Number, required: false }
 });
 
-let Video = module.exports = mongoose.model('Video', videoSchema);
+let Hot = module.exports = mongoose.model('Hot', hotSchema, 'hots');
 

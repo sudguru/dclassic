@@ -14,7 +14,7 @@ block content
       each video in hot
         .card.hoverable
           .card-image
-            img(src='/uploads/'+video.thumbnail)
+            img(src=video.thumbnail)
             span.new.badge.grey.darken-3(data-badge-caption="")= video.duration
           .card-content= video.title
             br
@@ -36,7 +36,7 @@ block content
       each video in trending
         .card.hoverable
           .card-image
-            img(src='/uploads/'+video.thumbnail)
+            img(src=video.thumbnail)
             span.new.badge.grey.darken-3(data-badge-caption="")= video.duration
           .card-content= video.title
             br
@@ -59,7 +59,7 @@ block content
         .card.hoverable
           .card-image
             a(href=`${SERVER_NAME}/video/${video.permlink}/${video.author}`)
-              img(src='/uploads/'+video.thumbnail)
+              img(src=video.thumbnail)
             span.new.badge.grey.darken-3(data-badge-caption="")= video.duration
           .card-content= video.title
             br

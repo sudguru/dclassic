@@ -1,6 +1,1 @@
-{"_id":{"$oid":"5af6e1dd3a2d4201fe002ee8"},"title":"New Title","content":"New Body","permlink":"new-title-20180512t124517160z","thumbnail_path":"myThumb-1526129081731.jpg","video_path":"myFile-1526129115177.mp4","video_width":1280,"video_duration":99.939,"tags":"Arabic,Anal","power_up":100,"author":"sudguru","posteddate":{"$date":"2018-05-12T12:45:17.601Z"},"__v":0}
-
-
-mongo export / import
-sudo mongoexport --db videosite -c videos  --out videos.json
-sudo mongoimport --db videosite -c videos --file videos.json
+{"_id":{"$oid":"5af6e1dd3a2d4201fe002ee8"},"title":"New Title","content":"New Body","permlink":"new-title-20180512t124517160z","thumbnail_path":"myThumb-1526129081731.jpg","video_path":"myFile-1526129115177.mp4","video_width":1280,"video_duration":99.939,"tags":"Arabic,Anal","power_up":100,"author":"sudguru","posteddate":{"$date":"2018-05-12T12:45:17.601Z"},"payment": 0,"__v":0}

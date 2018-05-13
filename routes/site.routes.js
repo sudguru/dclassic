@@ -3,6 +3,9 @@ const router = express.Router();
 const generalData = require('../config/generalData');
 const steem = require('steem');
 const moment = require("moment");
+const Video = require('../models/video.model');
+const Hot = require('../models/hot.model');
+const Trending = require('../models/trending.model');
 
 // Home Route
 router.get('/', function(req, res){
@@ -12,12 +15,11 @@ router.get('/', function(req, res){
   getCreated()
   .then(getHot)
   .then(getTrending)
-  .then(trending)
   .then(() => {
-    //console.log('xxx')
+    console.log(hot)
     res.render('index', { latests, hot, trending })
   });
-  //res.render('index', { latests, hot, trending })
+
 });
 
 router.get('/category/:categoryname', function(req, res) {
@@ -77,46 +79,31 @@ router.get('/video/:videotype', function(req, res) {
 
 const getCreated = function() {
   const promise = new Promise(function(resolve, reject) {
-    let data = [];
-    let json_metadata = {};
-    let paymentValue = 0;
-    let posted = '';
-    let duration = '';
-    let pv = '';
     var query = {
-      tag: 'dpornclassicupload',
       limit: 10,
-      filter_tags: ["test"],
-      truncate_body: 1
     };
-    steem.api.getDiscussionsByCreated(query, function(err, result) {
-      if(!err) {
-        result.forEach(element => {
-          json_metadata = JSON.parse(element.json_metadata);
-          paymentValue = parseFloat(element.total_payout_value) +
-                              parseFloat(element.curator_payout_value) +
-                              parseFloat(element.pending_payout_value);
-  
-          posted = moment(element.created).fromNow();
-          duration = moment.utc(json_metadata.video.video_duration*1000).format('mm:ss')
-
-          pv = '$ ' + paymentValue.toFixed(2);
-            let item = {
-              title: element.title,
-              thumbnail: json_metadata.video.thumbnail_path,
-              duration: duration,
-              author: element.author,
-              payment: pv,
-              posted: posted,
-              permlink: element.permlink
-            }
-            data.push(item);
-        });
-        latests = data;
-        //console.log('l', latests)
-        resolve(1);
+    Video.find({}, function(err, videos){
+      if(err){
+        logError(err, 'Site Video Find 87')
+        resolve(0)
       } else {
-        resolve(0);
+        //tasks
+        latests = videos.map(video => {
+          posted = moment(video.posteddate).fromNow();
+          duration = moment.utc(video.video_duration*1000).format('mm:ss');
+          const v = {
+            title: video.title,
+            thumbnail : generalData.SERVER_NAME + '/uploads/' + video.thumbnail_path,
+            videopath : generalData.SERVER_NAME + '/uploads/' + video.video_path,
+            duration: duration,
+            author: video.author,
+            payment: '$ ' + video.payment,
+            posted: posted,
+            permlink: video.permlink
+          }
+          return v;
+        });
+        resolve(1)
       }
     });
   });
@@ -125,40 +112,31 @@ const getCreated = function() {
 
 const getHot = function() {
   const promise = new Promise(function(resolve, reject) {
-    let data = [];
     var query = {
-      tag: 'dpornclassicupload',
       limit: 10,
-      filter_tags: ["test"],
-      truncate_body: 1
     };
-    steem.api.getDiscussionsByHot(query, function(err, result) {
-      if(!err) {
-        result.forEach(element => {
-          json_metadata = JSON.parse(element.json_metadata);
-          paymentValue = parseFloat(element.total_payout_value) +
-                              parseFloat(element.curator_payout_value) +
-                              parseFloat(element.pending_payout_value);
-  
-          posted = moment(element.created).fromNow();
-          duration = moment.utc(json_metadata.video.video_duration*1000).format('mm:ss')
-
-          pv = '$ ' + paymentValue.toFixed(2);
-            let item = {
-              title: element.title,
-              thumbnail: json_metadata.video.thumbnail_path,
-              duration: duration,
-              author: element.author,
-              payment: pv,
-              posted: posted,
-              permlink: element.permlink
-            }
-            data.push(item);
-        });
-        hot = data;
-        resolve(1);
+    Hot.find({}, function(err, videos){
+      if(err){
+        logError(err, 'Site hot find 120');
+        resolve(0)
       } else {
-        resolve(0);
+        //tasks
+        hot = videos.map(video => {
+          posted = moment(video.posteddate).fromNow();
+          duration = moment.utc(video.video_duration*1000).format('mm:ss');
+          const v = {
+            title: video.title,
+            thumbnail : generalData.SERVER_NAME + '/uploads/' + video.thumbnail_path,
+            videopath : generalData.SERVER_NAME + '/uploads/' + video.video_path,
+            duration: duration,
+            author: video.author,
+            payment: '$ ' + video.payment,
+            posted: posted,
+            permlink: video.permlink
+          }
+          return v;
+        });
+        resolve(1)
       }
     });
   });
@@ -167,46 +145,44 @@ const getHot = function() {
 
 const getTrending = function() {
   const promise = new Promise(function(resolve, reject) {
-    let data = [];
     var query = {
-      tag: 'dpornclassicupload',
       limit: 10,
-      filter_tags: ["test"],
-      truncate_body: 1
     };
-    steem.api.getDiscussionsByTrending(query, function(err, result) {
-      if(!err) {
-        result.forEach(element => {
-          json_metadata = JSON.parse(element.json_metadata);
-          paymentValue = parseFloat(element.total_payout_value) +
-                              parseFloat(element.curator_payout_value) +
-                              parseFloat(element.pending_payout_value);
-  
-          posted = moment(element.created).fromNow();
-          duration = moment.utc(json_metadata.video.video_duration*1000).format('mm:ss')
-
-          pv = '$ ' + paymentValue.toFixed(2);
-            let item = {
-              title: element.title,
-              thumbnail: json_metadata.video.thumbnail_path,
-              duration: duration,
-              author: element.author,
-              payment: pv,
-              posted: posted,
-              permlink: element.permlink
-            }
-            data.push(item);
-        });
-        trending = data;
-        resolve(1);
+    Trending.find({}, function(err, videos){
+      if(err){
+        logError(err, 'Site Trending Find 153');
+        resolve(0)
       } else {
-        resolve(1);
+        //tasks
+        trending = videos.map(video => {
+          posted = moment(video.posteddate).fromNow();
+          duration = moment.utc(video.video_duration*1000).format('mm:ss');
+          const v = {
+            title: video.title,
+            thumbnail : generalData.SERVER_NAME + '/uploads/' + video.thumbnail_path,
+            videopath : generalData.SERVER_NAME + '/uploads/' + video.video_path,
+            duration: duration,
+            author: video.author,
+            payment: '$ ' + video.payment,
+            posted: posted,
+            permlink: video.permlink
+          }
+          return v;
+        });
+        resolve(1)
       }
     });
   });
   return promise;
 };
 
+const logError = function(err, location) {
+  let error = new ErrorLog();
+  error.message = err.message;
+  error.location = location
+  error.posteddate = new Date();
+  error.save();
+}
 
 module.exports = router;
 
