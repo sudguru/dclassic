@@ -84,7 +84,7 @@ let private = require('./routes/private.routes');
 app.use('/', site);
 app.use('/auth', auth);
 app.use('/upload', upload);
-app.use('/private', upload);
+app.use('/private', private);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
