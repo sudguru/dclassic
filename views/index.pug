@@ -8,13 +8,14 @@ block content
       .col.s6
         h5.margin-top-15 Hot Videos
       .col.s6.right-align.pt-5
-        a.waves-effect.wave-pink.btn-flat.blue-text.text-darken-2.pt-5 More Hot Videos
+        a.waves-effect.wave-pink.btn-flat.blue-text.text-darken-2.pt-5(href='/hot') More Hot Videos
     
     .owl-carousel
       each video in hot
         .card.hoverable
           .card-image
-            img(src=video.thumbnail)
+            a(href=`${SERVER_NAME}/video/${video.permlink}/${video.author}`)
+              img(src=video.thumbnail)
             span.new.badge.grey.darken-3(data-badge-caption="")= video.duration
           .card-content= video.title
             br
@@ -30,13 +31,14 @@ block content
       .col.s6
         h5.margin-top-15 Trending Videos
       .col.s6.right-align.pt-5
-        a.waves-effect.wave-pink.btn-flat.blue-text.text-darken-2.pt-5 More Trending Videos
+        a.waves-effect.wave-pink.btn-flat.blue-text.text-darken-2.pt-5(href='/trending') More Trending Videos
     
     .owl-carousel
       each video in trending
         .card.hoverable
           .card-image
-            img(src=video.thumbnail)
+            a(href=`${SERVER_NAME}/video/${video.permlink}/${video.author}`)
+              img(src=video.thumbnail)
             span.new.badge.grey.darken-3(data-badge-caption="")= video.duration
           .card-content= video.title
             br
@@ -52,7 +54,7 @@ block content
       .col.s6
         h5.margin-top-15 New Videos
       .col.s6.right-align.pt-5
-        a.waves-effect.wave-pink.btn-flat.blue-text.text-darken-2.pt-5 More New Videos
+        a.waves-effect.wave-pink.btn-flat.blue-text.text-darken-2.pt-5(href='/new') More New Videos
     
     .owl-carousel
       each video in latests

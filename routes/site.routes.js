@@ -95,11 +95,62 @@ router.get('/hot', function(req,res) {
 });
 
 router.get('/trending', function(req,res) {
-
+  var query = {
+    limit: 50,
+  };
+  Trending.find({}, function(err, videos){
+    if(err){
+      logError(err, 'Site hot find 120');
+    } else {
+      //tasks
+      trending = videos.map(video => {
+        posted = moment(video.posteddate).fromNow();
+        duration = moment.utc(video.video_duration*1000).format('mm:ss');
+        const v = {
+          title: video.title,
+          thumbnail : generalData.SERVER_NAME + '/uploads/' + video.thumbnail_path,
+          videopath : generalData.SERVER_NAME + '/uploads/' + video.video_path,
+          duration: duration,
+          author: video.author,
+          payment: '$ ' + video.payment,
+          posted: posted,
+          permlink: video.permlink
+        }
+        return v;
+      });
+      res.render('hottrendingnew', { title: "Trending Videos", videos: trending })
+    }
+  });
 });
 
 router.get('/new', function(req,res) {
-
+  var query = {
+    limit: 50,
+    sort: '-posteddate'
+  };
+  Video.find({}, function(err, videos){
+    if(err){
+      logError(err, 'Site hot find 120');
+    } else {
+      //tasks
+      latests = videos.map(video => {
+        posted = moment(video.posteddate).fromNow();
+        duration = moment.utc(video.video_duration*1000).format('mm:ss');
+        const v = {
+          title: video.title,
+          thumbnail : generalData.SERVER_NAME + '/uploads/' + video.thumbnail_path,
+          videopath : generalData.SERVER_NAME + '/uploads/' + video.video_path,
+          duration: duration,
+          author: video.author,
+          payment: '$ ' + video.payment,
+          posted: posted,
+          permlink: video.permlink
+        }
+        return v;
+      });
+      res.render('hottrendingnew', { title: "New Videos", videos: latests })
+    }
+  });
 })
 
 router.get('/video/:videotype', function(req, res) {
