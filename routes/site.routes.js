@@ -26,8 +26,17 @@ router.get('/category/:categoryname', function(req, res) {
 
 });
 
-router.get('/video/:author', function(req, res) {
+router.get('/profile/:author', function(req, res) {
+  const author = req.params.author;
+  let voting_power;
+  steem.api.getAccounts([author], function(err, response){
+    voting_power = response.voting_power;
+  });
 
+  res.render("profile", { 
+    cover_image: 'abc',
+    voting_power: voting_power
+  });
 });
 
 router.get('/video/:permlink/:author', function(req, res) {
