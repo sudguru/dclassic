@@ -10,7 +10,7 @@ router.post('/upvote/:username/:author/:permlink', ensureAuthenticated, function
   let voter = req.params.username;
   let author = req.params.author;
   let permlink = req.params.permlink;
-  SCapi.vote(voter, author, permlink, 10000, function (err, res) {
+  SCapi.vote(voter, author, permlink, 10000, function (err, response) {
     if(err) {
       console.log(err);
     } else {

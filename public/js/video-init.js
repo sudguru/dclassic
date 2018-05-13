@@ -2,7 +2,7 @@
   $(function(){
     $('.dropdown-trigger').dropdown({
         hover: true,
-        alignment: 'bottom'
+        alignment: 'right'
     });
 
     $('.upvote').on('click', function() {
