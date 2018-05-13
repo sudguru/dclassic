@@ -5,7 +5,7 @@
         alignment: 'bottom'
     });
 
-    $('upvote').on('click', function() {
+    $('.upvote').on('click', function() {
 
       var username = $(this).data('user');
       var author = $(this).data('author');
