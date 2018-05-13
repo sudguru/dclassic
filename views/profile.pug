@@ -4,17 +4,17 @@ block headCSS
 block content
   section
     .row
-      .col.s12.m12.l12.xl12= cover_image
-        
+      .col.s12.m12.l12.xl12(style=`background-image: url(${cover_image}; background-repeat-none; min-height: 200px`)
+        .text-center= author
     .row.margin-vertical-15
       .col.s12
         ul.tabs
           li.tab.col.s6
-            a(href='#test1') Profile
+            a.active(href='#profile') Profile
           li.tab.col.s6
-            a.active(href='#test2') Videos
-      #test1.col.s12 Test 1
-      #test2.col.s12= voting_power
+            a(href='#videos') Videos
+      #profile.col.s12 Test 1
+      #videos.col.s12= voting_power
 
           
       

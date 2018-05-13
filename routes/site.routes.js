@@ -28,12 +28,12 @@ router.get('/category/:categoryname', function(req, res) {
 
 router.get('/profile/:author', function(req, res) {
   const author = req.params.author;
-  let voting_power;
   steem.api.getAccounts([author], function(err, response){
     voting_power = response[0].voting_power;
-    console.log('r', response);
+    cover_image = `https://steemitimages.com/2048x512/${response[0].json_metadata.cover_image}`
     res.render("profile", { 
-      cover_image: 'abc',
+      author: author,
+      cover_image: cover_image,
       voting_power: voting_power
     });
   });
