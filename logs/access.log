@@ -1691,3 +1691,4 @@ GET /uploads/myThumb-1526304472540.jpg 404 9 -- username -- Mon May 14 2018 19:3
 GET /uploads/myFile-1526304568948.mp4 404 9 -- username -- Mon May 14 2018 19:38:15 GMT+0545 (+0545) -- 0.701 ms
 GET /uploads/myThumb-1526304472540.jpg 404 9 -- username -- Mon May 14 2018 19:42:13 GMT+0545 (+0545) -- 6.108 ms
 GET /uploads/myThumb-1526129081731.jpg 404 9 -- username -- Mon May 14 2018 19:42:13 GMT+0545 (+0545) -- 1.174 ms
+GET /video/testing-testing-testing-20180513t103948090z/pranishg 200 6716 -- username -- Mon May 14 2018 20:12:41 GMT+0545 (+0545) -- 3528.690 ms
