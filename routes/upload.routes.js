@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const generalData = require('../config/generalData');
 const moment = require('moment');
-var UploadController = require('../controllers/upload.controller');
 
+var UploadController = require('../controllers/upload.controller');
 
 
 router.get('/', ensureAuthenticated, UploadController.showUploadForm);

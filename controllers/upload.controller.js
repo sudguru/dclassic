@@ -1,10 +1,13 @@
 const multer = require('multer');
 const path = require('path');
+
 const generalData = require('../config/generalData');
-// Video Model
+
 let Video = require('../models/video.model');
+
 _this = this
 selectedFileName = '';
+
 
 const storage = multer.diskStorage({
   destination: './public/uploads/',
@@ -33,6 +36,7 @@ exports.showUploadForm = function(req, res, next){
   res.render('upload', { categoryList: generalData.categoryList });
 }
 
+
 exports.uploadVideo = function(req, res, next) {
   upload(req, res, (err) => {
     if(err){
@@ -42,6 +46,7 @@ exports.uploadVideo = function(req, res, next) {
     }
   });
 }
+
 
 exports.savePost = async function(req, res, next) {
   let videoPost = new Video();
@@ -76,7 +81,7 @@ exports.savePost = async function(req, res, next) {
     app: 'steemporn.app'
   }
   //const jsonMetadata = {};
-  console.log(jsonMetadata);
+  //console.log(jsonMetadata);
 
   let p_s_d = 10000;
   if (videoPost.power_up === 50) {

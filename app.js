@@ -9,6 +9,7 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const config = require('./config/database');
 const generalData = require('./config/generalData');
+var rfs = require('rotating-file-stream')
 
 mongoose.connect(config.database);
 let db = mongoose.connection;
@@ -57,13 +58,19 @@ app.use(session({
 }));
 
 
-//Morgan Logging
-var accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs/access.log'), {flags: 'a'})
+
+//Morgan logging
+var logDirectory = path.join(__dirname, 'logs/logx')
+fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory)
+var accessLogStream = rfs('access.log', {
+  interval: '1d', // rotate daily
+  path: logDirectory
+})
 app.use(morgan(function (tokens, req, res) {
   return [
-    tokens.method(req, res),
-    tokens.url(req, res),
-    tokens.status(req, res),
+    tokens.method(req, res), '--',
+    tokens.url(req, res), '--',
+    tokens.status(req, res), '--',
     tokens.res(req, res, 'content-length'), '--',
     'username' , '--',
     new Date() , '--',

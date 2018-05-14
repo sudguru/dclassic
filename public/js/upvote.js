@@ -1,14 +1,14 @@
-(function($){
-  $(function(){
-
-    $('#follow').on('click', function() {
+(function ($) {
+  $(function () {
+    $('.upvote').on('click', function () {
 
       var username = $(this).data('user');
       var author = $(this).data('author');
-      var follower_count = $(this).data('follower');
+      var permlink = $(this).data('permlink');
+      var votes = $(this).data('votes');
       $.ajax({
         type: 'POST',
-        url: '/private/follow/'+username+'/'+author,
+        url: '/private/upvote/' + username + '/' + author + '/' + permlink,
         dataType: "json",
         success: (res) => {
           if (res.error) {
@@ -16,8 +16,8 @@
               html: 'Not Authorized. Please Login'
             })
           } else {
-            $('#follower').html(parseInt(follower_count)+1);
-            $('#votecount').html(parseInt(votes)+1);
+            $('ul#dropdown1').append(`<li class="collection-item">${res.result}</li>`);
+            $('#votecount').html(parseInt(votes) + 1);
           }
         },
         error: (err) => {

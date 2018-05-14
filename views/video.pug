@@ -8,7 +8,7 @@ block content
       .col.s12.m12.l8.xl8
         video#my_video_1.video-js.vjs-default-skin(width='100%', height='360px', controls='', preload='none', poster=video.thumbnail, data-setup='{ "aspectRatio":"640:360", "playbackRates": [0.5, 1, 1.5, 2] }')
           source(src=video.videopath, type='video/mp4')
-        .row.no-margin.border-top.border-left.border-right
+        .row.no-margin.border-top.border-left.pb-20.border-right
           .col.s12.m12.l8.xl8
             h5= video.title
             each tag in tags
@@ -21,7 +21,7 @@ block content
                 a.waves-effect.btn.cyan.lighten-4.dropdown-trigger.gift.black-text.right(href='#', data-user=username, data-author=video.author, data-permlink=video.permlink, data-votes=voters.length data-target='dropdown1')
                   i.material-icons.left card_giftcard
                   | Gift
-        .row.no-margin.border-top.border-left.border-right
+        .row.no-margin.border-top.border-left.pt-20.border-right
           .col.s6.m6.l6.xl6
             img.circle.responsive-img.left(src='https://img.busy.org/@'+video.author, alt='', style="height: 50px; margin-top: 10px; margin-right: 15px")
             .left
@@ -43,3 +43,4 @@ block footJS
   script(src='/js/video.js')
   script(src='/js/video-init.js')
   script(src='/js/follow.js')
+  script(src='/js/upvote.js')
