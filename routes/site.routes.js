@@ -16,7 +16,6 @@ router.get('/', function(req, res){
   .then(getHot)
   .then(getTrending)
   .then(() => {
-    console.log(hot)
     res.render('index', { latests, hot, trending })
   });
 
@@ -53,27 +52,34 @@ router.get('/profile/:author', function(req, res) {
   });
 
   steem.api.getAccounts([author], function(err, response){
-    voting_power = response[0].voting_power;
+
     cover_image='/imgs/cover.jpg';
     about = '';
     profile_image = 'https://img.busy.org/@'+author;
     location = '';
+    name = author;
     if(response[0].json_metadata) {
       json_metadata = JSON.parse(response[0].json_metadata);
-      console.log(json_metadata);
+      //console.log(json_metadata);
       cover_image = `https://steemitimages.com/2048x512/${json_metadata.profile.cover_image}`
       about = json_metadata.profile.about;
       profile_image = json_metadata.profile.profile_image;
       location = json_metadata.profile.location
+      name = json_metadata.profile.name
     }
     balance = response[0].balance;
     sbd_balance = response[0].sbd_balance;
+
+    var secondsago = (new Date - new Date(response[0].last_vote_time + "Z")) / 1000;
+    var vpow = response[0].voting_power + (10000 * secondsago / 432000);
+    var VP = Math.min(vpow / 100, 100).toFixed(2);
+
     steem.api.getFollowCount(author, function(err1, result) {
       
       res.render("profile", { 
         author: author,
         cover_image: cover_image,
-        voting_power: voting_power,
+        voting_power: VP,
         location: location,
         profile_image: profile_image,
         about: about,
@@ -81,7 +87,8 @@ router.get('/profile/:author', function(req, res) {
         follower_count: result.follower_count,
         following_count: result.following_count,
         balance: balance,
-        sbd_balance: sbd_balance
+        sbd_balance: sbd_balance,
+        name: name
 
       });
     });
@@ -119,9 +126,12 @@ router.get('/video/:permlink/:author', function(req, res) {
         voters.push(ac.voter);
       }
     })
-    console.log(voters)
+    //console.log(voters)
     tags = json_metadata.video.categories.split(",");
-    res.render('video', { video, voters, tags });
+    steem.api.getFollowCount(author, function(err2, result2) {
+      follower_count = result2.follower_count;
+      res.render('video', { video, voters, tags, follower_count });
+    });
   });
 });
 

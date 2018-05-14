@@ -1550,3 +1550,133 @@ GET /profile/pranishg 304  -- username -- Sun May 13 2018 22:01:04 GMT+0545 (+05
 GET /profile/pranishg   -- username -- Sun May 13 2018 22:03:03 GMT+0545 (+0545) --  ms
 GET /profile/pranishg 200 5396 -- username -- Sun May 13 2018 22:03:09 GMT+0545 (+0545) -- 3768.574 ms
 GET /profile/pranishg 200 5403 -- username -- Sun May 13 2018 22:04:02 GMT+0545 (+0545) -- 3779.447 ms
+GET / 200 8350 -- username -- Sun May 13 2018 23:29:01 GMT+0545 (+0545) -- 1021.535 ms
+GET / 200 8407 -- username -- Sun May 13 2018 23:33:30 GMT+0545 (+0545) -- 1017.883 ms
+GET /uploads/myThumb-1526207948170.jpg 404 9 -- username -- Sun May 13 2018 23:33:30 GMT+0545 (+0545) -- 2.066 ms
+GET /video/new-title-20180512t124517160z/sudguru 200 6382 -- username -- Sun May 13 2018 23:33:35 GMT+0545 (+0545) -- 3345.060 ms
+GET /profile/sudguru 200 5810 -- username -- Sun May 13 2018 23:33:42 GMT+0545 (+0545) -- 3099.440 ms
+GET /profile/sudguru 304  -- username -- Sun May 13 2018 23:33:50 GMT+0545 (+0545) -- 2519.884 ms
+GET /video/new-title-20180512t124517160z/sudguru 304  -- username -- Sun May 13 2018 23:33:56 GMT+0545 (+0545) -- 2434.133 ms
+GET /video/new-title-20180512t124517160z/sudguru 200 6445 -- username -- Sun May 13 2018 23:36:24 GMT+0545 (+0545) -- 2677.838 ms
+GET /profile/sudguru 200 5847 -- username -- Sun May 13 2018 23:51:09 GMT+0545 (+0545) -- 3045.229 ms
+GET /video/new-title-20180512t124517160z/sudguru 200 6457 -- username -- Mon May 14 2018 00:07:04 GMT+0545 (+0545) -- 2960.623 ms
+GET /video/new-title-20180512t124517160z/sudguru 200 6462 -- username -- Mon May 14 2018 00:13:20 GMT+0545 (+0545) -- 3447.906 ms
+POST /private/upvote/undefined/sudguru/new-title-20180512t124517160z 302 95 -- username -- Mon May 14 2018 00:13:25 GMT+0545 (+0545) -- 14.614 ms
+GET /auth/login?state=/upvote/undefined/sudguru/new-title-20180512t124517160z 301  -- username -- Mon May 14 2018 00:13:25 GMT+0545 (+0545) -- 1.191 ms
+POST /private/upvote/undefined/sudguru/new-title-20180512t124517160z 302 95 -- username -- Mon May 14 2018 00:13:56 GMT+0545 (+0545) -- 13.536 ms
+GET /video/new-title-20180512t124517160z/sudguru 304  -- username -- Mon May 14 2018 00:14:18 GMT+0545 (+0545) -- 3680.487 ms
+POST /private/upvote/undefined/sudguru/new-title-20180512t124517160z 302 95 -- username -- Mon May 14 2018 00:14:20 GMT+0545 (+0545) -- 8.098 ms
+POST /private/upvote/undefined/sudguru/new-title-20180512t124517160z 302 95 -- username -- Mon May 14 2018 00:15:34 GMT+0545 (+0545) -- 12.116 ms
+POST /private/upvote/undefined/sudguru/new-title-20180512t124517160z 302 95 -- username -- Mon May 14 2018 00:16:11 GMT+0545 (+0545) -- 13.491 ms
+POST /private/upvote/undefined/sudguru/new-title-20180512t124517160z 302 95 -- username -- Mon May 14 2018 00:16:42 GMT+0545 (+0545) -- 12.254 ms
+POST /private/upvote/undefined/sudguru/new-title-20180512t124517160z 302 95 -- username -- Mon May 14 2018 00:17:44 GMT+0545 (+0545) -- 12.438 ms
+POST /private/upvote/undefined/sudguru/new-title-20180512t124517160z 401 26 -- username -- Mon May 14 2018 00:19:12 GMT+0545 (+0545) -- 1521.795 ms
+GET /js/materialize.js.map 404 9 -- username -- Mon May 14 2018 00:20:15 GMT+0545 (+0545) -- 1.726 ms
+POST /private/upvote/undefined/sudguru/new-title-20180512t124517160z 401 26 -- username -- Mon May 14 2018 00:20:35 GMT+0545 (+0545) -- 1259.165 ms
+GET /video/new-title-20180512t124517160z/sudguru 304  -- username -- Mon May 14 2018 00:23:27 GMT+0545 (+0545) -- 3262.984 ms
+GET /js/materialize.js.map 404 9 -- username -- Mon May 14 2018 00:23:27 GMT+0545 (+0545) -- 1.685 ms
+POST /private/upvote/undefined/sudguru/new-title-20180512t124517160z 401 26 -- username -- Mon May 14 2018 00:23:31 GMT+0545 (+0545) -- 1227.992 ms
+GET /video/new-title-20180512t124517160z/sudguru 304  -- username -- Mon May 14 2018 00:24:07 GMT+0545 (+0545) -- 4682.207 ms
+GET /js/materialize.js.map 404 9 -- username -- Mon May 14 2018 00:24:07 GMT+0545 (+0545) -- 1.725 ms
+POST /private/upvote/undefined/sudguru/new-title-20180512t124517160z 401 26 -- username -- Mon May 14 2018 00:24:12 GMT+0545 (+0545) -- 1391.290 ms
+GET /video/new-title-20180512t124517160z/sudguru 304  -- username -- Mon May 14 2018 00:24:52 GMT+0545 (+0545) -- 3237.752 ms
+GET /js/materialize.js.map 404 9 -- username -- Mon May 14 2018 00:24:52 GMT+0545 (+0545) -- 2.740 ms
+POST /private/upvote/undefined/sudguru/new-title-20180512t124517160z 401 26 -- username -- Mon May 14 2018 00:24:56 GMT+0545 (+0545) -- 1216.025 ms
+GET /video/new-title-20180512t124517160z/sudguru 304  -- username -- Mon May 14 2018 00:25:18 GMT+0545 (+0545) -- 3242.953 ms
+GET /js/materialize.js.map 404 9 -- username -- Mon May 14 2018 00:25:18 GMT+0545 (+0545) -- 1.706 ms
+POST /private/upvote/undefined/sudguru/new-title-20180512t124517160z 401 26 -- username -- Mon May 14 2018 00:25:21 GMT+0545 (+0545) -- 1071.188 ms
+GET /video/new-title-20180512t124517160z/sudguru 200 6481 -- username -- Mon May 14 2018 00:28:52 GMT+0545 (+0545) -- 3277.151 ms
+GET /js/materialize.js.map 404 9 -- username -- Mon May 14 2018 00:28:53 GMT+0545 (+0545) -- 2.124 ms
+GET /favicon.ico 404 9 -- username -- Mon May 14 2018 00:29:39 GMT+0545 (+0545) -- 1.485 ms
+GET /video/new-title-20180512t124517160z/sudguru 304  -- username -- Mon May 14 2018 00:32:06 GMT+0545 (+0545) -- 3479.280 ms
+POST /private/upvote/undefined/sudguru/new-title-20180512t124517160z 401 26 -- username -- Mon May 14 2018 00:32:11 GMT+0545 (+0545) -- 1211.604 ms
+GET /video/new-title-20180512t124517160z/sudguru 200 6495 -- username -- Mon May 14 2018 00:35:38 GMT+0545 (+0545) -- 3407.603 ms
+GET /js/materialize.js.map 404 9 -- username -- Mon May 14 2018 00:35:56 GMT+0545 (+0545) -- 2.236 ms
+POST /private/follow/undefined/sudguru 401 26 -- username -- Mon May 14 2018 00:37:12 GMT+0545 (+0545) -- 1522.545 ms
+GET /upload 302 82 -- username -- Mon May 14 2018 00:38:21 GMT+0545 (+0545) -- 7.477 ms
+GET /auth/login?state=/ 301  -- username -- Mon May 14 2018 00:38:21 GMT+0545 (+0545) -- 1.154 ms
+GET /js/materialize.js.map 404 9 -- username -- Mon May 14 2018 00:41:35 GMT+0545 (+0545) -- 9.279 ms
+GET /video/new-title-20180512t124517160z/sudguru 304  -- username -- Mon May 14 2018 00:41:41 GMT+0545 (+0545) -- 3465.378 ms
+GET /js/materialize.js.map 404 9 -- username -- Mon May 14 2018 00:41:41 GMT+0545 (+0545) -- 1.093 ms
+GET /upload 302 82 -- username -- Mon May 14 2018 00:41:46 GMT+0545 (+0545) -- 12.976 ms
+GET / 200 8398 -- username -- Mon May 14 2018 18:12:47 GMT+0545 (+0545) -- 1067.224 ms
+GET /uploads/myThumb-1526207948170.jpg 404 9 -- username -- Mon May 14 2018 18:12:47 GMT+0545 (+0545) -- 2.584 ms
+GET /uploads/myThumb-1526207948170.jpg 404 9 -- username -- Mon May 14 2018 18:12:47 GMT+0545 (+0545) -- 0.631 ms
+GET /profile/sudguru 200 5893 -- username -- Mon May 14 2018 18:12:55 GMT+0545 (+0545) -- 3027.331 ms
+GET /profile/pranishg 200 5486 -- username -- Mon May 14 2018 18:13:22 GMT+0545 (+0545) -- 3166.639 ms
+GET /profile/pranishg 200 5563 -- username -- Mon May 14 2018 18:18:10 GMT+0545 (+0545) -- 2084.057 ms
+GET /profile/pranishg 200 5584 -- username -- Mon May 14 2018 18:18:48 GMT+0545 (+0545) -- 3414.574 ms
+GET /profile/pranishg 200 5597 -- username -- Mon May 14 2018 18:19:13 GMT+0545 (+0545) -- 2475.388 ms
+GET /profile/pranishg 200 5634 -- username -- Mon May 14 2018 18:21:54 GMT+0545 (+0545) -- 3235.330 ms
+GET /profile/pranishg 200 5695 -- username -- Mon May 14 2018 18:26:04 GMT+0545 (+0545) -- 6252.220 ms
+GET /profile/pranishg 200 5695 -- username -- Mon May 14 2018 18:26:49 GMT+0545 (+0545) -- 12048.738 ms
+GET /js/materialize.js.map 404 9 -- username -- Mon May 14 2018 18:27:05 GMT+0545 (+0545) -- 1.064 ms
+POST /private/follow/undefined/pranishg 401 96 -- username -- Mon May 14 2018 18:27:15 GMT+0545 (+0545) -- 23737.406 ms
+POST /private/follow/undefined/pranishg 401 26 -- username -- Mon May 14 2018 18:27:53 GMT+0545 (+0545) -- 11987.644 ms
+GET /profile/pranishg 200 5718 -- username -- Mon May 14 2018 18:28:52 GMT+0545 (+0545) -- 6793.499 ms
+POST /private/follow/undefined/pranishg 401 26 -- username -- Mon May 14 2018 18:28:59 GMT+0545 (+0545) -- 2853.230 ms
+GET /profile/pranishg 200 5712 -- username -- Mon May 14 2018 18:29:30 GMT+0545 (+0545) -- 2888.725 ms
+GET / 304  -- username -- Mon May 14 2018 18:30:34 GMT+0545 (+0545) -- 209.682 ms
+GET /uploads/myThumb-1526207948170.jpg 404 9 -- username -- Mon May 14 2018 18:30:34 GMT+0545 (+0545) -- 1.174 ms
+GET /uploads/myThumb-1526207948170.jpg 404 9 -- username -- Mon May 14 2018 18:30:34 GMT+0545 (+0545) -- 0.827 ms
+GET /profile/pranishg 200 5713 -- username -- Mon May 14 2018 18:30:45 GMT+0545 (+0545) -- 7062.298 ms
+GET /profile/pranishg 200 5731 -- username -- Mon May 14 2018 18:31:59 GMT+0545 (+0545) -- 2580.554 ms
+POST /private/follow/undefined/pranishg 401 26 -- username -- Mon May 14 2018 18:32:14 GMT+0545 (+0545) -- 1786.108 ms
+GET /profile/pranishg 200 5739 -- username -- Mon May 14 2018 18:32:55 GMT+0545 (+0545) -- 2392.261 ms
+GET /js/materialize.js.map 404 9 -- username -- Mon May 14 2018 18:33:33 GMT+0545 (+0545) -- 0.878 ms
+GET /profile/pranishg 200 5751 -- username -- Mon May 14 2018 18:34:38 GMT+0545 (+0545) -- 2638.325 ms
+GET /js/materialize.js.map 404 9 -- username -- Mon May 14 2018 18:34:38 GMT+0545 (+0545) -- 0.797 ms
+POST /private/follow/undefined/pranishg 401 26 -- username -- Mon May 14 2018 18:34:43 GMT+0545 (+0545) -- 1365.725 ms
+GET /profile/pranishg 500 19 -- username -- Mon May 14 2018 18:37:30 GMT+0545 (+0545) -- 11.928 ms
+GET /profile/pranishg 200 5751 -- username -- Mon May 14 2018 18:37:47 GMT+0545 (+0545) -- 3557.281 ms
+GET /js/materialize.js.map 404 9 -- username -- Mon May 14 2018 18:37:47 GMT+0545 (+0545) -- 2.455 ms
+GET /auth/login?state=griha 301  -- username -- Mon May 14 2018 18:37:50 GMT+0545 (+0545) -- 1.216 ms
+GET /auth?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYzMDIzODEsImV4cCI6MTUyNjkwNzE4MX0.WkrZCJT2AgsHV72lAvhYnoLqqMD6Z2blWemBKkkzGq4&expires_in=604800&state=griha&username=sudguru 500 36 -- username -- Mon May 14 2018 18:38:02 GMT+0545 (+0545) -- 8.871 ms
+GET /auth?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYzMDIzODEsImV4cCI6MTUyNjkwNzE4MX0.WkrZCJT2AgsHV72lAvhYnoLqqMD6Z2blWemBKkkzGq4&expires_in=604800&state=griha&username=sudguru 302 46 -- username -- Mon May 14 2018 18:38:46 GMT+0545 (+0545) -- 8.903 ms
+GET / 200 8654 -- username -- Mon May 14 2018 18:38:47 GMT+0545 (+0545) -- 793.530 ms
+GET /uploads/myThumb-1526207948170.jpg 404 9 -- username -- Mon May 14 2018 18:38:47 GMT+0545 (+0545) -- 2.312 ms
+GET /uploads/myThumb-1526207948170.jpg 404 9 -- username -- Mon May 14 2018 18:38:47 GMT+0545 (+0545) -- 0.821 ms
+GET /profile/sudguru 200 6423 -- username -- Mon May 14 2018 18:38:54 GMT+0545 (+0545) -- 2921.946 ms
+GET /profile/sudguru 200 6462 -- username -- Mon May 14 2018 18:40:22 GMT+0545 (+0545) -- 2603.989 ms
+GET /profile/sudguru 200 6417 -- username -- Mon May 14 2018 18:41:20 GMT+0545 (+0545) -- 4909.740 ms
+GET /profile/sudguru 200 6417 -- username -- Mon May 14 2018 18:43:39 GMT+0545 (+0545) -- 3313.157 ms
+GET /profile/sudguru 200 6416 -- username -- Mon May 14 2018 18:44:03 GMT+0545 (+0545) -- 3718.876 ms
+GET /profile/sudguru 304  -- username -- Mon May 14 2018 18:44:29 GMT+0545 (+0545) -- 2384.916 ms
+GET /video/new-title-20180512t124517160z/sudguru 200 6791 -- username -- Mon May 14 2018 18:44:40 GMT+0545 (+0545) -- 3188.823 ms
+GET /auth/logout 302 46 -- username -- Mon May 14 2018 18:44:47 GMT+0545 (+0545) -- 1211.196 ms
+GET / 200 8398 -- username -- Mon May 14 2018 18:44:47 GMT+0545 (+0545) -- 236.674 ms
+GET /uploads/myThumb-1526207948170.jpg 404 9 -- username -- Mon May 14 2018 18:44:47 GMT+0545 (+0545) -- 1.132 ms
+GET /video/new-title-20180512t124517160z/sudguru 200 6495 -- username -- Mon May 14 2018 18:44:52 GMT+0545 (+0545) -- 2548.692 ms
+GET /auth?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYzMDI4MjMsImV4cCI6MTUyNjkwNzYyM30.HHjNoEaVH_UEIrQwBNWLK_FtBxPYn5dCIpY45JNA4aA&expires_in=604800&state=griha&username=sudguru 302 46 -- username -- Mon May 14 2018 18:45:23 GMT+0545 (+0545) -- 12.578 ms
+GET / 200 8654 -- username -- Mon May 14 2018 18:45:24 GMT+0545 (+0545) -- 872.211 ms
+GET /uploads/myThumb-1526207948170.jpg 404 9 -- username -- Mon May 14 2018 18:45:24 GMT+0545 (+0545) -- 2.169 ms
+GET /uploads/myThumb-1526207948170.jpg 404 9 -- username -- Mon May 14 2018 18:45:25 GMT+0545 (+0545) -- 0.735 ms
+GET /video/new-title-20180512t124517160z/sudguru 200 6791 -- username -- Mon May 14 2018 18:45:36 GMT+0545 (+0545) -- 3381.752 ms
+GET /auth/logout 302 46 -- username -- Mon May 14 2018 18:45:39 GMT+0545 (+0545) -- 1250.715 ms
+GET / 200 8398 -- username -- Mon May 14 2018 18:45:39 GMT+0545 (+0545) -- 260.204 ms
+GET /uploads/myThumb-1526207948170.jpg 404 9 -- username -- Mon May 14 2018 18:45:39 GMT+0545 (+0545) -- 0.971 ms
+GET /uploads/myThumb-1526207948170.jpg 404 9 -- username -- Mon May 14 2018 18:45:39 GMT+0545 (+0545) -- 0.489 ms
+GET /video/new-title-20180512t124517160z/sudguru 200 6495 -- username -- Mon May 14 2018 18:45:43 GMT+0545 (+0545) -- 2752.259 ms
+POST /private/follow/undefined/sudguru 401 26 -- username -- Mon May 14 2018 18:45:53 GMT+0545 (+0545) -- 1285.225 ms
+POST /private/upvote/undefined/sudguru/new-title-20180512t124517160z 401 26 -- username -- Mon May 14 2018 18:45:58 GMT+0545 (+0545) -- 1468.709 ms
+GET /upload 302 82 -- username -- Mon May 14 2018 19:05:49 GMT+0545 (+0545) -- 18.449 ms
+GET /auth/login?state=/ 301  -- username -- Mon May 14 2018 19:05:49 GMT+0545 (+0545) -- 0.737 ms
+GET /auth?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYXBwIiwicHJveHkiOiJzdGVlbXBvcm4uYXBwIiwidXNlciI6InN1ZGd1cnUiLCJzY29wZSI6WyJ2b3RlIiwiY29tbWVudCIsImRlbGV0ZV9jb21tZW50IiwiY29tbWVudF9vcHRpb25zIiwiY3VzdG9tX2pzb24iLCJjbGFpbV9yZXdhcmRfYmFsYW5jZSJdLCJpYXQiOjE1MjYzMDQwNjQsImV4cCI6MTUyNjkwODg2NH0.B6zsS5ncwb7UudCLLX1jlSwoiGCAxMX1MXotLkUYNLQ&expires_in=604800&state=%2F&username=sudguru 302 46 -- username -- Mon May 14 2018 19:06:04 GMT+0545 (+0545) -- 5.064 ms
+GET / 200 8654 -- username -- Mon May 14 2018 19:06:05 GMT+0545 (+0545) -- 964.850 ms
+GET /uploads/myThumb-1526207948170.jpg 404 9 -- username -- Mon May 14 2018 19:06:05 GMT+0545 (+0545) -- 2.831 ms
+GET /uploads/myThumb-1526207948170.jpg 404 9 -- username -- Mon May 14 2018 19:06:05 GMT+0545 (+0545) -- 1.107 ms
+GET /profile/sudguru 304  -- username -- Mon May 14 2018 19:06:13 GMT+0545 (+0545) -- 3052.262 ms
+GET /video/new-title-20180512t124517160z/sudguru 200 6767 -- username -- Mon May 14 2018 19:06:53 GMT+0545 (+0545) -- 2456.755 ms
+GET /auth/logout 302 46 -- username -- Mon May 14 2018 19:13:27 GMT+0545 (+0545) -- 1874.488 ms
+GET / 200 8398 -- username -- Mon May 14 2018 19:13:28 GMT+0545 (+0545) -- 863.783 ms
+GET /uploads/myThumb-1526129081731.jpg 404 9 -- username -- Mon May 14 2018 19:13:28 GMT+0545 (+0545) -- 2.178 ms
+GET /uploads/myThumb-1526129081731.jpg 404 9 -- username -- Mon May 14 2018 19:13:28 GMT+0545 (+0545) -- 0.943 ms
+GET /video/testing-testing-testing-20180513t103948090z/pranishg 200 6506 -- username -- Mon May 14 2018 19:13:34 GMT+0545 (+0545) -- 3398.193 ms
+POST /private/follow/undefined/undefined 401 26 -- username -- Mon May 14 2018 19:13:41 GMT+0545 (+0545) -- 1363.478 ms
+POST /private/upvote/undefined/pranishg/testing-testing-testing-20180513t103948090z 401 26 -- username -- Mon May 14 2018 19:13:46 GMT+0545 (+0545) -- 2043.831 ms
+GET /video/testing-testing-testing-20180513t103948090z/pranishg 200 6425 -- username -- Mon May 14 2018 19:20:17 GMT+0545 (+0545) -- 5076.366 ms
+GET /video/testing-testing-testing-20180513t103948090z/pranishg 200 6708 -- username -- Mon May 14 2018 19:23:22 GMT+0545 (+0545) -- 3957.775 ms
+GET /video/testing-testing-testing-20180513t103948090z/pranishg 200 6730 -- username -- Mon May 14 2018 19:24:31 GMT+0545 (+0545) -- 2619.724 ms
+GET /video/testing-testing-testing-20180513t103948090z/pranishg 200 6730 -- username -- Mon May 14 2018 19:25:09 GMT+0545 (+0545) -- 2068.144 ms
+GET /video/testing-testing-testing-20180513t103948090z/pranishg 200 6714 -- username -- Mon May 14 2018 19:26:04 GMT+0545 (+0545) -- 2284.127 ms
+GET /video/testing-testing-testing-20180513t103948090z/pranishg 200 6714 -- username -- Mon May 14 2018 19:26:23 GMT+0545 (+0545) -- 3017.402 ms

@@ -6,20 +6,32 @@ const moment = require("moment");
 
 
 
-router.post('/upvote/:username/:author/:permlink', ensureAuthenticated, function(req, res) {
+router.post('/upvote/:username/:author/:permlink', function(req, res) {
   let voter = req.params.username;
   let author = req.params.author;
   let permlink = req.params.permlink;
   SCapi.vote(voter, author, permlink, 10000, function (err, response) {
     if(err) {
-      console.log(err);
+      res.status(401).send({ result: err.message })
     } else {
       res.status(200).json({ result: voter});
     }
   });
-  
-
 });
+
+router.post('/follow/:username/:author', function(req, res){
+  let follower = req.params.username;
+  let following = req.params.author;
+  SCapi.follow(follower, following, function (err, result) {
+    if(err) {
+      res.status(401).send({ result: err.message});
+    } else {
+      res.status(200).send({ result: 'success'});
+    }
+
+  });
+});
+
 router.get('/subscriptions', ensureAuthenticated, function(req, res) {
   res.render('subscriptions');
 });

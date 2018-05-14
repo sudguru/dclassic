@@ -74,6 +74,8 @@ app.use(morgan(function (tokens, req, res) {
 app.get('*', function(req, res, next){
     res.locals.username = req.session.username || null;
     res.locals.SERVER_NAME = generalData.SERVER_NAME;
+    let access_token = req.session.token || null;
+    SCapi.setAccessToken(access_token)
     next();
 });
 

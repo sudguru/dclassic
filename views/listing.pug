@@ -11,11 +11,12 @@ block content
         .col.s12.m6.l3.xl3
           .card.hoverable
             .card-image
-              img(src=video.thumbnail)
+              a(href=`${SERVER_NAME}/video/${video.permlink}/${video.author}`)
+                img(src=video.thumbnail)
               span.new.badge.grey.darken-3(data-badge-caption="")= video.duration
             .card-content= video.title
               br
-              a.small.grey-text.darken-1(href='#')= video.author
+              a.small.grey-text.darken-1(href='/profile/'+video.author)= video.author
             .card-action
               .badge.grey.lighten-2.left= video.payment
               .badge.right.small= video.posted

@@ -8,26 +8,28 @@ block content
       .col.s12.m12.l8.xl8
         video#my_video_1.video-js.vjs-default-skin(width='100%', height='360px', controls='', preload='none', poster=video.thumbnail, data-setup='{ "aspectRatio":"640:360", "playbackRates": [0.5, 1, 1.5, 2] }')
           source(src=video.videopath, type='video/mp4')
-        .row.no-margin
-          .col.s12.m12.l12.xl12.border-left.border-right
+        .row.no-margin.border-top.border-left.border-right
+          .col.s12.m12.l8.xl8
             h5= video.title
-        .row.no-margin.border-left.border-right
-          .col.s6.m6.l6.xl6
             each tag in tags
               a(href='/catgory/'+tag)
                 span.grey.left(style='border-radius:6px; padding:3px 10px; color: #222; margin-right: 5px')= tag 
-          .col.s6.m6.l6.xl6
-              .right
-                a.btn-flat.dropdown-trigger.upvote(href='#', data-user=username, data-author=video.author, data-permlink=video.permlink, data-votes=voters.length data-target='dropdown1')
+          .col.s12.m12.l4.xl4.pt-20
+                a.waves-effect.btn.pink.lighten-3.dropdown-trigger.upvote.black-text.left(href='#', data-user=username, data-author=video.author, data-permlink=video.permlink, data-votes=voters.length data-target='dropdown1')
                   i.material-icons.left thumb_up
                   span#votecount= voters.length
+                a.waves-effect.btn.cyan.lighten-4.dropdown-trigger.upvote.black-text.right(href='#', data-user=username, data-author=video.author, data-permlink=video.permlink, data-votes=voters.length data-target='dropdown1')
+                  i.material-icons.left card_giftcard
+                  | Gift
         .row.no-margin.border-top.border-left.border-right
           .col.s6.m6.l6.xl6
             img.circle.responsive-img.left(src='https://img.busy.org/@'+video.author, alt='', style="height: 50px; margin-top: 10px; margin-right: 15px")
             .left
               a(href='/profile/'+video.author)= video.author
               br
-              a.waves-effect.waves-light.btn.red(href='/private/subscribe') Subscribe ( 5 )
+              a#follow.waves-effect.wave-red.red.btn-small.white-text.right(href='#', data-user=username, data-author=author, data-follower=follower_count) 
+                i.material-icons.white-text.left person_add
+                | Follow ( #{follower_count} )
           .col.s6.m6.l6.xl6(style='padding-top:25px')
             h5.no-margin.right= video.payment
     
@@ -40,3 +42,4 @@ block content
 block footJS
   script(src='/js/video.js')
   script(src='/js/video-init.js')
+  script(src='/js/follow.js')

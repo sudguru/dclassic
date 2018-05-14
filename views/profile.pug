@@ -4,9 +4,14 @@ block headCSS
 block content
   section
     .row.mt-5
-      .col.s12.m12.l12.xl12(style=`background-image: url(${cover_image}); background-repeat: no-repeat; background-size: cover; background-position: center;  min-height: 200px`)
-        h2.center-align.white-text= author
-        a.btn#follow.white.btn-small.red-text.right(href='#') Follow
+      .col.s12.m12.l12.xl12(style=`background-color: red; background-repeat: no-repeat; background-size: cover; background-position: center;  min-height: 200px`)
+        h2.center-align.white-text= name
+        a#follow.waves-effect.wave-red.red.btn-small.white-text.right(href='#', data-user=username, data-author=author, data-follower=follower_count) 
+          i.material-icons.white-text.left person_add
+          | Follow ( #{follower_count} )
+        a.waves-effect.wave-red.red.btn-small.white-text.left(href='https://en.wikipedia.org/wiki/'+location, target='_blank')
+          i.material-icons.white-text.left place
+          | #{location}
     .row.margin-vertical-15
       .col.s12
         ul.tabs
@@ -21,7 +26,7 @@ block content
               | #{about}
             .col.s12.m12.l4.xl4
               h6 Voting Power:
-              | #{voting_power}
+              | #{voting_power} %
               h6 Steem Balance:
               | #{balance}
               h6 SBD Balance:
@@ -36,11 +41,12 @@ block content
               .col.s12.m6.l3.xl3
                 .card.hoverable
                   .card-image
-                    img(src=video.thumbnail)
+                    a(href=`${SERVER_NAME}/video/${video.permlink}/${video.author}`)
+                      img(src=video.thumbnail)
                     span.new.badge.grey.darken-3(data-badge-caption="")= video.duration
                   .card-content= video.title
                     br
-                    a.small.grey-text.darken-1(href='#')= video.author
+                    a.small.grey-text.darken-1(href='/profile/'+video.author)= video.author
                   .card-action
                     .badge.grey.lighten-2.left= video.payment
                     .badge.right.small= video.posted
@@ -50,3 +56,4 @@ block content
       
 block footJS
   script(src='/js/profile.js')
+  script(src='/js/follow.js')

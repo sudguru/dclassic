@@ -21,6 +21,7 @@ router.get('/logout', function(req, res) {
   SCapi.revokeToken(function (error, result) {
     req.session.username = null;
     req.session.expirationTimestamp = null;
+    req.session.token = null;
     res.redirect('/');
   });
 });
@@ -39,6 +40,7 @@ router.get('/', function(req, res){
   var expirationTimestamp = decoded.exp - 86400; //1 day buffer
   req.session.username = decoded.user;
   req.session.expirationTimestamp = expirationTimestamp;
+  req.session.token = access_token;
   console.log
   res.redirect('/'+state);
 });

@@ -28,6 +28,7 @@ function ensureAuthenticated(req, res, next){
     }
   } else {
     redirectPath = req.path;
+    console.log(redirectPath);
     res.redirect('/auth/login?state='+redirectPath);
   }
 }

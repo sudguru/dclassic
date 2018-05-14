@@ -21,9 +21,12 @@
             $('#votecount').html(parseInt(votes)+1);
         },
         error: (err) => {
-            console.log(err);
+
+            if(err.statusText == "Unauthorized") {
+                M.toast({html: 'Not Authorized. Please Login'})
+            }
         }
-    });
+      });
     });
 
   }); // end of document ready
