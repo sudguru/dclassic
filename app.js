@@ -23,7 +23,7 @@ db.on('error', function(err){
 });
 const myCronJob = require('./myCronJob');
 var CronJob = require('cron').CronJob;
-new CronJob('*/5 * * * *', myCronJob, null, true, 'America/Los_Angeles');
+new CronJob('*/1 * * * *', myCronJob, null, true, 'America/Los_Angeles');
 
 
 // Init App
@@ -82,6 +82,7 @@ app.get('*', function(req, res, next){
     res.locals.username = req.session.username || null;
     res.locals.SERVER_NAME = generalData.SERVER_NAME;
     let access_token = req.session.token || null;
+    console.log('ssss', access_token);
     SCapi.setAccessToken(access_token)
     next();
 });

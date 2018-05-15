@@ -11,13 +11,13 @@
         url: '/private/follow/'+username+'/'+author,
         dataType: "json",
         success: (res) => {
+          console.log(res);
           if (res.error) {
             M.toast({
               html: 'Not Authorized. Please Login'
             })
           } else {
             $('#follower').html(parseInt(follower_count)+1);
-            $('#votecount').html(parseInt(votes)+1);
           }
         },
         error: (err) => {

@@ -30,7 +30,7 @@ exports.showProfilePage = (req, res, next) => {
   av = [];
   Video.find({"author": author}, function(err, videos){
     if(err){
-      logError(err, 'Site author video find 38');
+      logError(err, 'Site author video find 33');
     } else {
       //tasks
       av = videos.map(video => {
@@ -49,6 +49,7 @@ exports.showProfilePage = (req, res, next) => {
         return v;
       });
     }
+    console.log(av)
   });
 
   steem.api.getAccounts([author], function(err, response){
@@ -75,7 +76,7 @@ exports.showProfilePage = (req, res, next) => {
     var VP = Math.min(vpow / 100, 100).toFixed(2);
 
     steem.api.getFollowCount(author, function(err1, result) {
-      
+      console.log('av', av)
       res.render("profile", { 
         author: author,
         cover_image: cover_image,
@@ -119,17 +120,19 @@ exports.showVideoPage = (req, res, next) => {
         posted: posted,
         permlink: permlink
     }
-    let voters = [];
+    var voters = "";
+    var voters_count = 0;
     result.active_votes.forEach(ac => {
       if(ac.percent > 0) {
-        voters.push(ac.voter);
+        voters_count++;
+        voters += '<span class="left" style="line-height: 20px">' + ac.voter + '</span><br>';
       }
     })
     //console.log(voters)
     tags = json_metadata.video.categories.split(",");
     steem.api.getFollowCount(author, function(err2, result2) {
       follower_count = result2.follower_count;
-      res.render('video', { video, voters, tags, follower_count });
+      res.render('video', { video, voters, voters_count, tags, follower_count });
     });
   });
 }
@@ -249,6 +252,7 @@ const getCreated = function() {
           }
           return v;
         });
+        console.log('latests', latests)
         resolve(1)
       }
     });

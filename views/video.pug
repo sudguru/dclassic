@@ -15,10 +15,10 @@ block content
               a(href='/catgory/'+tag)
                 span.grey.left(style='border-radius:6px; padding:3px 10px; color: #222; margin-right: 5px')= tag 
           .col.s12.m12.l4.xl4.pt-20
-                a.waves-effect.btn.pink.lighten-3.dropdown-trigger.upvote.black-text.left(href='#', data-user=username, data-author=video.author, data-permlink=video.permlink, data-votes=voters.length data-target='dropdown1')
+                a.waves-effect.btn.pink.lighten-3.tooltipped.upvote.black-text.left(href='#', data-tooltip=voters data-user=username, data-author=video.author, data-permlink=video.permlink, data-votes=voters_count)
                   i.material-icons.left thumb_up
-                  span#votecount= voters.length
-                a.waves-effect.btn.cyan.lighten-4.dropdown-trigger.gift.black-text.right(href='#', data-user=username, data-author=video.author, data-permlink=video.permlink, data-votes=voters.length data-target='dropdown1')
+                  span#votecount= voters_count
+                a#giftData.modal-trigger.waves-effect.btn.cyan.lighten-4.gift.black-text.right(href="#modalGift", data-permlink=video.permlink, data-author=video.author)
                   i.material-icons.left card_giftcard
                   | Gift
         .row.no-margin.border-top.border-left.pt-20.border-right
@@ -27,18 +27,35 @@ block content
             .left
               a(href='/profile/'+video.author)= video.author
               br
-              a#follow.waves-effect.wave-red.red.btn-small.white-text.right(href='#', data-user=username, data-author=author, data-follower=follower_count) 
+              a#follow.waves-effect.wave-red.red.btn-small.white-text.right(href='#', data-user=username, data-author=video.author, data-follower=follower_count) 
                 i.material-icons.white-text.left person_add
-                | Follow ( #{follower_count} )
+                | Follow ( <span id="follower">#{follower_count}</span> )
           .col.s6.m6.l6.xl6(style='padding-top:25px')
             h5.no-margin.right= video.payment
     
       
       .col.s12.m12.l4.xl4
         h6 Similar Videos
-  ul#dropdown1.dropdown-content.collection
-    each voter in voters
-      li.collection-item= voter
+  #modalGift.modal.bottom-sheet
+    .modal-content
+      h4.green-text 
+        i.material-icons.left(style='font-size: 36px') card_giftcard
+        | Send Gift, show that you appreciate
+      p
+        label
+          input.with-gap(name='giftCurrency', type='radio', checked='', value='STEEM')
+          span STEEM
+        label(style='margin-left: 30px')
+          input.with-gap(name='giftCurrency', type='radio', value='SBD')
+          span SBD
+      br
+      p
+        .input-field.col.s6
+          input#giftAmount.validate(type='text', placeholder='0.00')
+          label(for='giftAmount') Amount
+    .modal-footer
+      a.modal-close.waves-effect.waves-green.btn-flat(href='#!') Cancel
+      a#sendGift.modal-close.waves-effect.waves-green.btn.green(href='#!') Send Gift Now
 block footJS
   script(src='/js/video.js')
   script(src='/js/video-init.js')

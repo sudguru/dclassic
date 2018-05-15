@@ -173,14 +173,14 @@ const deleteUnwanted = function(task, data) {
     data.forEach( trending => {
       var found = mongovideos.find(v => v.permlink === trending.permlink);
       if(!found) {
-        Trending.remove({ permlink: trending.permlink});
+        Trending.remove({ permlink: trending.permlink}).exec();
       }
     });
   } else {
     data.forEach( hot => {
       var found = mongovideos.find(v => v.permlink === hot.permlink);
       if(!found) {
-        Hot.remove({ permlink: hot.permlink});
+        Hot.remove({ permlink: hot.permlink}).exec();
       }
     });
   } 

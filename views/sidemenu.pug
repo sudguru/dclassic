@@ -34,20 +34,21 @@ ul#slide-out.sidenav
     a.waves-effect.sidenav-close(href='/new')
       i.material-icons redeem
       | New Videos
-  li
-    .divider
-  li
-    a.subheader Library
-  li
-    a.waves-effect.sidenav-close(href='/private/history') 
-      i.material-icons history
-      | History
-    a.waves-effect.sidenav-close(href='/private/watchlater') 
-      i.material-icons watch_later
-      | Watch Later
-    a.waves-effect.sidenav-close(href='/private/liked') 
-      i.material-icons thumb_up
-      | Liked Videos
+  if username
+    li
+      .divider
+    li
+      a.subheader Library
+    li
+      a.waves-effect.sidenav-close(href='/private/history') 
+        i.material-icons history
+        | History
+      a.waves-effect.sidenav-close(href='/private/watchlater') 
+        i.material-icons watch_later
+        | Watch Later
+      a.waves-effect.sidenav-close(href='/private/liked') 
+        i.material-icons thumb_up
+        | Liked Videos
   li
     .divider
   li
