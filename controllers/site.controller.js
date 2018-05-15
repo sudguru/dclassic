@@ -232,7 +232,7 @@ const getCreated = function() {
     var query = {
       limit: 10,
     };
-    Video.find({}, function(err, videos){
+    ideo.find({}).sort({"posteddate": -1}).exec(function(err, videos){
       if(err){
         logError(err, 'Site Video Find 87')
         resolve(0)
