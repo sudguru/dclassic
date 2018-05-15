@@ -200,7 +200,8 @@ exports.listNewVideos = (req, res, next) => {
     limit: 50,
     sort: '-posteddate'
   };
-  Video.find({}, function(err, videos){
+
+  Video.find({}).sort({"posteddate": -1}).exec(function(err, videos){
     if(err){
       logError(err, 'Site hot find 205');
     } else {
