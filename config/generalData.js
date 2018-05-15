@@ -37,6 +37,8 @@ module.exports = {
     'pupmisfit',
     'themistress',
     'sexyvenezolana',
-    'kassy-kage'
+    'kassy-kage',
+    'joey-fancy',
+    'royaltifffanpage'
   ] 
 }
