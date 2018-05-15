@@ -52,7 +52,7 @@ exports.sendGift = (req, res, next) => {
   var callbackURL = `${generalData.SERVER_NAME}`;
 
   var link = SCapi.sign('transfer', {
-    to: sendto,
+    to: sendto, 
     amount: amtText,
     memo: 'Gift Via DPORNCLASSIC!',
   }, callbackURL);
