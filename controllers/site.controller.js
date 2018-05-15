@@ -200,9 +200,9 @@ exports.listNewVideos = (req, res, next) => {
     limit: 50,
     sort: '-posteddate'
   };
-  Video.find({}, {sort: '-posteddate'}, function(err, videos){
+  Video.find({}, function(err, videos){
     if(err){
-      logError(err, 'Site hot find 120');
+      logError(err, 'Site hot find 205');
     } else {
       //tasks
       latests = videos.map(video => {
