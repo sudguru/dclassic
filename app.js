@@ -23,7 +23,7 @@ db.on('error', function(err){
 });
 const myCronJob = require('./myCronJob');
 var CronJob = require('cron').CronJob;
-new CronJob('*/1 * * * *', myCronJob, null, true, 'America/Los_Angeles');
+new CronJob('*/5 * * * *', myCronJob, null, true, 'America/Los_Angeles');
 
 
 // Init App
