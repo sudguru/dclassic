@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const generalData = require('../config/generalData');
+const CanUpload = require('../models/canupload.model');
 const moment = require('moment');
 
 var UploadController = require('../controllers/upload.controller');
@@ -18,12 +19,17 @@ function ensureAuthenticated(req, res, next){
   console.log(validUser)
   console.log(username)
   if(username && validUser){
-    if(generalData.usersAllowedToUpload.indexOf(username) >= 0 )
-    {
-      return next();
-    } else {
-      res.redirect('/?msg=Sorry You are not Authorized to upload.');
-    }
+    CanUpload.find({}, (error, result) => {
+
+      const usersAllowedToUpload = result.map(user => user.username)
+      if(usersAllowedToUpload.indexOf(username) >= 0 )
+      {
+        return next();
+      } else {
+        res.redirect('/?msg=1');
+      }
+    });
+    
   } else {
     res.redirect('/auth/login?state=upload');
   }

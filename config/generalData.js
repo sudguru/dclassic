@@ -1,7 +1,7 @@
 module.exports = {
   SERVER_IP: '54.38.207.246',
-  SERVER_NAME: 'https://dpornclassic.co',
-  //SERVER_NAME: 'http://localhost:3000',
+  //SERVER_NAME: 'https://dpornclassic.co',
+  SERVER_NAME: 'http://localhost:3000',
   categoryList : [
     'Straight',
     'Lesbian',
@@ -39,6 +39,8 @@ module.exports = {
     'sexyvenezolana',
     'kassy-kage',
     'joey-fancy',
-    'royaltifffanpage'
+    'royaltifffanpage',
+    'n0game',
+    'dpornshop'
   ] 
 }

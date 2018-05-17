@@ -1,0 +1,25 @@
+extends layout
+block headCSS
+
+block content
+  section
+    .row.margin-vertical-15
+      .col.s12
+        h5.no-margin Users Allowed to Upload 
+    .row.margin-vertical-15
+      .col.s12.m6
+        ul.collection
+          each user in users
+            li.collection-item(id=user._id)= user.username
+                a.btn-delete.btn-flat.right.red-text(data-uid=user._id) Delete
+      .col.s12.m6
+        form(method='POST', action='/admin/canupload')
+          .input-field.col.s6
+            input#username.validate(type='text', name="username")
+            label(for='username') STEEM Username
+          button.btn.waves-effect.waves-light(type='submit', name='action')
+            | Submit
+            i.material-icons.right send
+
+block footJS
+  script(src='/js/canupload.js')

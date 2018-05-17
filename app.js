@@ -91,10 +91,12 @@ let site = require('./routes/site.routes');
 let auth = require('./routes/auth.routes');
 let upload = require('./routes/upload.routes');
 let private = require('./routes/private.routes');
+let admin = require('./routes/canupload.routes');
 app.use('/', site);
 app.use('/auth', auth);
 app.use('/upload', upload);
 app.use('/private', private);
+app.use('/admin', admin);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
