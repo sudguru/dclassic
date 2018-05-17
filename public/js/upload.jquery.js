@@ -3,6 +3,9 @@
     $('#modalLoading').modal({
       dismissible: false
     });
+
+    $('select').formSelect();
+
     localStorage.removeItem('myFile');
     localStorage.removeItem('myThumb');
     $('#btn-choose').on('change', function(event) {
