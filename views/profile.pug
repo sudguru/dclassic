@@ -6,9 +6,10 @@ block content
     .row.mt-5
       .col.s12.m12.l12.xl12(style=`background-color: red; background-repeat: no-repeat; background-size: cover; background-position: center;  min-height: 200px`)
         h2.center-align.white-text= name
-        a#follow.waves-effect.wave-red.red.btn-small.white-text.right(href='#', data-user=username, data-author=author, data-follower=follower_count) 
-          i.material-icons.white-text.left person_add
-          | Follow ( #{follower_count} )
+        if username !== author
+          a#follow.waves-effect.wave-red.red.btn-small.white-text.right(href='#', data-user=username, data-author=author, data-follower=follower_count) 
+            i.material-icons.white-text.left person_add
+            | Follow ( #{follower_count} )
         a.waves-effect.wave-red.red.btn-small.white-text.left(href='https://en.wikipedia.org/wiki/'+location, target='_blank')
           i.material-icons.white-text.left place
           | #{location}
