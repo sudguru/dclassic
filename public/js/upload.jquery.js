@@ -107,7 +107,7 @@
     $('#btn-snap').on('click', function() {
       const v = document.querySelector('video');
       $(this).addClass('disabled');
-      $('#btn-upload').removeClass('disabled');
+      
       $(".determinate").css("width", 0);
       // if (v.paused) {
       //   this.i_progress_mode = 'indeterminate';
@@ -139,6 +139,7 @@
       };
       xhr.onload = function() {
         localStorage.setItem('myThumb', this.responseText);
+        $('#btn-upload').removeClass('disabled');
         $(".determinate").css("width", 0);
       };
 
