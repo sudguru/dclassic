@@ -4,7 +4,7 @@ block headCSS
 block content
   section
     .row.mt-5
-      .col.s12.m12.l12.xl12(style=`backgroung-image: ${cover_image}; background-color: red; background-repeat: no-repeat; background-size: cover; background-position: center;  min-height: 200px`)
+      .col.s12.m12.l12.xl12(style=`background-image: ${cover_image}; background-color: red; background-repeat: no-repeat; background-size: cover; background-position: center;  min-height: 200px`)
         h2.center-align.white-text= name
         if username !== author
           a#follow.waves-effect.wave-red.red.btn-small.white-text.right(href='#', data-user=username, data-author=author, data-follower=follower_count) 
