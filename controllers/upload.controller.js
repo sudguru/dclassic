@@ -50,17 +50,18 @@ exports.uploadVideo = function(req, res, next) {
 
 exports.savePost = async function(req, res, next) {
   let videoPost = new Video();
-  videoPost.title = req.body.title,
-  videoPost.content = req.body.content,
-  videoPost.permlink = req.body.permlink,
-  videoPost.thumbnail_path = req.body.thumbnail_path,
-  videoPost.video_path = req.body.video_path,
-  videoPost.video_width = req.body.video_width,
-  videoPost.video_duration = req.body.video_duration,
-  videoPost.tags = req.body.tags,
-  videoPost.power_up = req.body.power_up,
-  videoPost.author = req.session.username,
-  videoPost.posteddate = new Date();    
+  videoPost.title = req.body.title;
+  videoPost.content = req.body.content;
+  videoPost.permlink = req.body.permlink;
+  videoPost.thumbnail_path = req.body.thumbnail_path;
+  videoPost.video_path = req.body.video_path;
+  videoPost.video_width = req.body.video_width;
+  videoPost.video_duration = req.body.video_duration;
+  videoPost.tags = req.body.tags;
+  videoPost.power_up = req.body.power_up;
+  videoPost.author = req.session.username;
+  videoPost.posteddate = new Date();
+  videoPost.payment = 0;    
 
   const videotags = [];
 
