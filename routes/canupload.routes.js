@@ -52,7 +52,7 @@ const getUsersWhoCanUpload = () => {
 };
 
 function ensureAuthenticated(req, res, next) {
-  let masterUsers = ['sudguru', 'pranishg']
+  let masterUsers = ['sudguru', 'pranishg', 'dpornshop']
   let username = req.session.username;
   let expirationTimestamp = req.session.expirationTimestamp
   let currentTimestamp = moment(new Date()).format('X');

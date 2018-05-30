@@ -76,7 +76,10 @@ exports.showProfilePage = (req, res, next) => {
     var VP = Math.min(vpow / 100, 100).toFixed(2);
 
     steem.api.getFollowCount(author, function(err1, result) {
-      console.log('av', av)
+      steem.api.getFollowers(author, 'a', 'blog', result.follower_count, function(err2, result2) {
+        
+      });
+      
       res.render("profile", { 
         author: author,
         cover_image: cover_image,
